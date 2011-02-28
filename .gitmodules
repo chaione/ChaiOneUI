@@ -1,0 +1,3 @@
+[submodule "External/ChaiOneUtils"]
+	path = External/ChaiOneUtils
+	url = git@github.com:chaione/ChaiOneUtils.git

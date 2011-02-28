@@ -7,13 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */; };
+		29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */; };
+		29044EF0131C612900426DCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EEF131C612900426DCF /* CFNetwork.framework */; };
+		29044EF2131C613000426DCF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EF1131C613000426DCF /* CoreFoundation.framework */; };
+		29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F0D131C625700426DCF /* libChaiOneUtils.a */; };
+		29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F17131C62BF00426DCF /* UIKit.framework */; };
+		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
 		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; };
 		293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1A381309786200E97454 /* CHSplashScreenViewController.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		29044F0C131C625700426DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libChaiOneUtils.a */;
+			remoteInfo = ChaiOneUtils;
+		};
+		29044F0F131C626F00426DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ChaiOneUtils */;
+			remoteInfo = ChaiOneUtils;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLoginAlertViewController.h; sourceTree = "<group>"; };
+		29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLoginAlertViewController.m; sourceTree = "<group>"; };
+		29044EEF131C612900426DCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		29044EF1131C613000426DCF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUtils.xcodeproj; path = External/ChaiOneUtils/ChaiOneUtils.xcodeproj; sourceTree = "<group>"; };
+		29044F17131C62BF00426DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		293A1A371309786200E97454 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
 		293A1A381309786200E97454 /* CHSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashScreenViewController.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -26,7 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				29044EF0131C612900426DCF /* CFNetwork.framework in Frameworks */,
+				29044EF2131C613000426DCF /* CoreFoundation.framework in Frameworks */,
+				29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */,
+				29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +80,7 @@
 		0867D691FE84028FC02AAC07 /* ChaiOneUI */ = {
 			isa = PBXGroup;
 			children = (
+				29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -56,6 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				29044EEF131C612900426DCF /* CFNetwork.framework */,
+				29044EF1131C613000426DCF /* CoreFoundation.framework */,
+				29044F17131C62BF00426DCF /* UIKit.framework */,
+				29044F19131C62C700426DCF /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -63,9 +104,27 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				29044ED7131C60BE00426DCF /* CHLoginAlertViewController */,
 				293A1A361309781600E97454 /* SplashScreenViewController */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		29044ED7131C60BE00426DCF /* CHLoginAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */,
+				29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */,
+			);
+			path = CHLoginAlertViewController;
+			sourceTree = "<group>";
+		};
+		29044F06131C625700426DCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29044F0D131C625700426DCF /* libChaiOneUtils.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		293A1A361309781600E97454 /* SplashScreenViewController */ = {
@@ -94,6 +153,7 @@
 			files = (
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */,
+				29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +171,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				29044F10131C626F00426DCF /* PBXTargetDependency */,
 			);
 			name = ChaiOneUI;
 			productName = ChaiOneUI;
@@ -135,6 +196,12 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* ChaiOneUI */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 29044F06131C625700426DCF /* Products */;
+					ProjectRef = 29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* ChaiOneUI */,
@@ -142,16 +209,35 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		29044F0D131C625700426DCF /* libChaiOneUtils.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libChaiOneUtils.a;
+			remoteRef = 29044F0C131C625700426DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */,
+				29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29044F10131C626F00426DCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChaiOneUtils;
+			targetProxy = 29044F0F131C626F00426DCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -167,7 +253,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ChaiOneUI_Prefix.pch;
+				HEADER_SEARCH_PATHS = "External/ChaiOneUtils/**";
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = ChaiOneUI;
 			};
 			name = Debug;
@@ -181,7 +272,12 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ChaiOneUI_Prefix.pch;
+				HEADER_SEARCH_PATHS = "External/ChaiOneUtils/**";
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = ChaiOneUI;
 			};
 			name = Release;
