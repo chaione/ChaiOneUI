@@ -10,8 +10,7 @@
 
 NSString* const kCHSplashScreenDidBeginFadeNotification	= @"CHSplashScreenDidBeginFadeNotifiation";
 NSString* const kCHSplashScreenDidEndFadeNotification	= @"CHSplashScreenDidEndFadeNotification";
-NSTimeInterval const kCHSplashScreenFadeDuration		= 0.25f;
-
+NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 
 @interface CHSplashScreenViewController (Private)
 - (void) loadDefaultImage;
@@ -25,24 +24,27 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 0.25f;
 #pragma mark -
 @implementation CHSplashScreenViewController
 
-@synthesize window				= _window;
-@synthesize transitionView		= _transitionView;
-@synthesize duration			= _duration;
-
+@synthesize window                      = _window;
+@synthesize transitionView              = _transitionView;
+@synthesize duration                    = _duration;
+@synthesize defaultImage                = _defaultImage;
+@synthesize showsStatusBarOnDismissal   = _showsStatusBarOnDismissal;
 
 #pragma mark -
 #pragma mark init, dealloc
 
 - (id) initWithTransitionView:(UIView*)view forWindow:(UIWindow*)window {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_transitionView	= [view retain];
 		_window			= [window retain];
+        [_window addSubview:_transitionView];
 	}
 	
 	return self;
 }
 
 - (void)dealloc {
+    [_defaultImage release];
 	[_transitionView release];
 	[_window release];
     [super dealloc];
@@ -54,9 +56,8 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 0.25f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self loadDefaultImage];
-	
 	_duration	= kCHSplashScreenFadeDuration;
+    [self loadDefaultImage];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -99,8 +100,13 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 0.25f;
 #pragma mark Public Methods
 
 - (void) transition {
+    
+    if (self.showsStatusBarOnDismissal) {
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    }
 	[UIView beginAnimations:@"CHSplashScreenViewControllerAnimation" context:nil];
 	[UIView setAnimationDelegate:self];
+
 	[UIView setAnimationDuration:_duration];
 	[UIView setAnimationWillStartSelector:@selector(postBeginNotification)];
 	[UIView setAnimationDidStopSelector:@selector(finalizeTransition)];
@@ -126,15 +132,14 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 0.25f;
 	// 7.) Add view to window
 	
 	// Test code
-	UIImageView*	defaultImgView	= [[UIImageView alloc] initWithFrame:[[self view] frame]];
-	[defaultImgView setImage:[UIImage imageNamed:@"Default-Landscape.png"]];
+	UIImageView*	defaultImgView	= [[UIImageView alloc] initWithFrame:[[self window] frame]];
+	[defaultImgView setImage:[self defaultImage]];
 	[[self view] addSubview:defaultImgView];
 	[_window addSubview:[self view]];
 }
 
 - (void) finalizeTransition {
 	[[self view] removeFromSuperview];
-	[_window addSubview:_transitionView];
 	[self playTransitionSound];
 	[self postEndNotification];
 }

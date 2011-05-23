@@ -7,7 +7,7 @@
 //
 
 #import "ChaiOneUISamplesAppDelegate.h"
-
+#import "CHSplashScreenViewController.h"
 @implementation ChaiOneUISamplesAppDelegate
 
 
@@ -19,7 +19,18 @@
 {
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
+
     self.window.rootViewController = self.navigationController;
+    CHSplashScreenViewController *vc = [[CHSplashScreenViewController alloc] initWithTransitionView:self.window.rootViewController.view forWindow:self.window];
+    vc.defaultImage = [UIImage imageNamed:@"Default.png"];
+    
+    [self.window addSubview:vc.view];
+    
+    // [self.window addSubview:self.tabBarController.view];
+//    [self.window makeKeyAndVisible];
+    
+    
+
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DCFE268138AFF3E00BABE38 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DCFE267138AFF3E00BABE38 /* Default.png */; };
 		B52CB2981386BCA300581E13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CB2971386BCA300581E13 /* UIKit.framework */; };
 		B52CB29A1386BCA300581E13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CB2991386BCA300581E13 /* Foundation.framework */; };
 		B52CB29C1386BCA300581E13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CB29B1386BCA300581E13 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DCFE267138AFF3E00BABE38 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B52CB2931386BCA300581E13 /* ChaiOneUISamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaiOneUISamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52CB2971386BCA300581E13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B52CB2991386BCA300581E13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +89,7 @@
 				B52CB29D1386BCA300581E13 /* ChaiOneUISamples */,
 				B52CB2961386BCA300581E13 /* Frameworks */,
 				B52CB2941386BCA300581E13 /* Products */,
+				8DCFE267138AFF3E00BABE38 /* Default.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,6 +236,7 @@
 				B52CB2AB1386BCA300581E13 /* MainWindow.xib in Resources */,
 				B52CB2B11386BCA400581E13 /* RootViewController.xib in Resources */,
 				B52CB2D71386BD1600581E13 /* TagSelectorViewController.xib in Resources */,
+				8DCFE268138AFF3E00BABE38 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
