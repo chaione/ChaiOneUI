@@ -13,12 +13,20 @@
 @protocol CHTagSelectorDelegate;
 
 @interface CHTagSelectorView : UIView <UIGestureRecognizerDelegate> {
-	UIView *panelView;
+	NSMutableArray *tags;
 }
+
+@property (nonatomic, retain) UIView *panelView;
+@property (nonatomic, retain) UIView *panelHeaderView;
+@property (nonatomic, retain) UILabel *titleLabel;
 
 @property (nonatomic, assign) id<CHTagSelectorDataSource>	datasource;
 @property (nonatomic, assign) id<CHTagSelectorDelegate>		delegate;
 
+
+- (NSArray *)selectedTags;
+- (BOOL)allSelected;
+- (BOOL)noneSelected;
 - (void)presentInContainerView:(UIView *)view;
 
 @end
@@ -36,7 +44,6 @@
 
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didToggleTag:(CHTag *)tag;
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)tags;
-- (void)tagSelectorDidCancel:(CHTagSelectorView *)tagSelector;
 
 @end
 

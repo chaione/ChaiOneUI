@@ -11,15 +11,40 @@
 
 @implementation CHTag
 
-@synthesize selected, highlightColor;
+@synthesize selected, highlightColor, normalColor;
+
+- (id) init {
+	self = [super init];
+	if (self != nil) {
+		self.backgroundColor = [UIColor clearColor];
+	}
+	return self;
+}
+
+- (id) initWithFrame:(CGRect)rect {
+	self = [super initWithFrame:rect];
+	if (self != nil) {
+		self.backgroundColor = [UIColor clearColor];
+	}
+	return self;
+}
+
+- (void)setBackgroundColor:(UIColor *)color {
+	[super setBackgroundColor:[UIColor clearColor]];
+	self.layer.backgroundColor = color.CGColor;
+	
+	//take first background color set as the normal color
+	if (!self.normalColor) {
+		self.normalColor = color;		
+	}
+}
 
 - (void)toggle {
 	
-	self.selected != self.selected;
+	self.selected = !self.selected;
 	
-	UIColor *targetColor = self.selected ? self.highlightColor : self.highlightColor;
-	self.backgroundColor = [UIColor clearColor];
-	[UIView animateWithDuration:.3
+	UIColor *targetColor = self.selected ? self.highlightColor : self.normalColor;
+	[UIView animateWithDuration:.2
 					 animations:^ {
 						 self.layer.backgroundColor = targetColor.CGColor;
 					 }];

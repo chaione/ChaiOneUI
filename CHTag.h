@@ -14,6 +14,7 @@
 }
 
 @property (nonatomic, assign) BOOL selected;
+@property (nonatomic, retain) UIColor *normalColor;
 @property (nonatomic, retain) UIColor *highlightColor;
 
 - (void)toggle;

@@ -8,6 +8,7 @@
 
 #import "TagSelectorViewController.h"
 #import "CHTagSelectorView.h"
+#import "NSArray+CHFunctionalAdditions.h"
 
 @implementation TagSelectorViewController
 
@@ -50,6 +51,14 @@
 - (void)tagSelectorDidCancel:(CHTagSelectorView *)tagSelector {
 }
 
+- (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)selectedTags {
+	NSArray *tagNames = [selectedTags ch_collect:^(id obj) {
+		return (id)[obj text];
+	}];
+	
+	self.tagsLabel.text = [tagNames componentsJoinedByString:@", "];
+}
+
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didToggleTag:(CHTag *)tag {
 }
 
@@ -59,9 +68,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+		
 	tags = [[NSArray arrayWithObjects:@"Rock", @"Blues", @"Jazz", @"Rap", @"Bluegrass", @"Folk", @"Alternative", @"Country", 
-			@"Hip-Hop", @"Dance", @"Electronic", @"Funk", @"Metal", @"Pop", @"Punk",
+			 @"Hip-Hop", @"Dance", @"Electronic", @"Funk", @"Metal", @"Pop", @"Punk", @"Bluegrass", @"Folk", @"Alternative", @"Country", 
+			 @"Hip-Hop", @"Dance", @"Electronic", @"Funk", @"Metal", @"Pop", @"Punk",
 			 nil] retain];
 }
 
@@ -79,6 +89,7 @@
 
 - (IBAction)onSelectTags:(id)sender {
     CHTagSelectorView *tagSelector = [[CHTagSelectorView alloc] init];
+	tagSelector.titleLabel.text = @"Select Genre";
     tagSelector.delegate = self;
     tagSelector.datasource = self;
 	[tagSelector presentInContainerView:self.view];

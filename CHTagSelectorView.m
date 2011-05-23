@@ -7,16 +7,18 @@
 //
 
 #import "CHTagSelectorView.h"
+#import "NSArray+CHFunctionalAdditions.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface CHTagSelectorView ()
 - (void)setupViews;
+- (void)closeAndNotifyOfSelection:(BOOL)notify;
 @end
 
 
 @implementation CHTagSelectorView
 
-@synthesize delegate, datasource;
+@synthesize delegate, datasource, panelView, panelHeaderView, titleLabel;
 
 - (id)init {
 	self = [super init];
@@ -36,7 +38,7 @@
 }
 
 - (void)setupViews {
-	if(panelView) {
+	if(self.panelView) {
 		return;
 	}
 	
@@ -49,30 +51,98 @@
 	
 	[self addSubview:closeButton];
 	
-	panelView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 280)];
-	panelView.backgroundColor = [UIColor darkGrayColor];
-	panelView.layer.cornerRadius = 10;
-	panelView.autoresizesSubviews = YES;
-	panelView.clipsToBounds = YES;
+	self.panelView = [[[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 280)] autorelease];
+	self.panelView.backgroundColor = [UIColor darkGrayColor];
+	self.panelView.layer.cornerRadius = 10;
+	self.panelView.autoresizesSubviews = YES;
+	self.panelView.clipsToBounds = YES;
 	
-	UIView *panelHeader = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 60)] autorelease];
-	panelHeader.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	panelHeader.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1];
-	[panelView addSubview:panelHeader];
+	self.panelHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 60)] autorelease];
+	self.panelHeaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	self.panelHeaderView.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1];
+	[self.panelView addSubview:panelHeaderView];
+	
+	UIButton *allButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[allButton setTitle:@"All" forState:UIControlStateNormal];
+	[allButton addTarget:self action:@selector(selectAll:) forControlEvents:UIControlEventTouchUpInside];
+	allButton.titleLabel.font = [UIFont systemFontOfSize:14];
+	allButton.frame = CGRectMake(168, 15, 40, 30);
+	[self.panelHeaderView addSubview:allButton];
+
+	UIButton *noneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[noneButton setTitle:@"None" forState:UIControlStateNormal];
+	[noneButton addTarget:self action:@selector(selectNone:) forControlEvents:UIControlEventTouchUpInside];
+	noneButton.titleLabel.font = [UIFont systemFontOfSize:14];
+	noneButton.frame = CGRectMake(210, 15, 40, 30);
+	[self.panelHeaderView addSubview:noneButton];
+	
+	self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, 160, 60)] autorelease];
+	self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+	self.titleLabel.backgroundColor = self.panelHeaderView.backgroundColor;
+	self.titleLabel.textColor = [UIColor whiteColor];
+	self.titleLabel.shadowColor = [UIColor blackColor];
+	self.titleLabel.shadowOffset = CGSizeMake(0, 1);
+	[self.panelHeaderView addSubview:self.titleLabel];
+	
+	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[doneButton setTitle:@"Done" forState:UIControlStateNormal];
+	[doneButton addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
+	doneButton.frame = CGRectMake(190, self.panelView.frame.size.height - 25, 80, 30);
+	doneButton.backgroundColor = [UIColor colorWithWhite:.2 alpha:1.0];
+	doneButton.layer.shadowColor = [[UIColor blackColor] CGColor];
+	doneButton.layer.shadowOffset = CGSizeMake(0, 1);
+	doneButton.layer.shadowOpacity = 0.5;
+	doneButton.layer.borderColor = [[UIColor darkGrayColor] CGColor];
+	doneButton.layer.cornerRadius = 6;
+	
+	[self.panelView addSubview:doneButton];
 }
 
-- (void)close:(id)sender {
-	if (self.delegate && [self.delegate respondsToSelector:@selector(tagSelector:didCloseWithTags:)]) {
-		[self.delegate tagSelector:self didCloseWithTags:nil];
-	}
+- (NSArray *)selectedTags {
+	return [tags ch_select:^(id obj) {
+		return [obj selected];
+	}];
+}
+
+- (void)closeAndNotifyOfSelection:(BOOL)notify {
 	
+	if (notify) {		
+		if (self.delegate && [self.delegate respondsToSelector:@selector(tagSelector:didCloseWithTags:)]) {
+			[self.delegate tagSelector:self didCloseWithTags:[self selectedTags]];
+		}
+	}
+
 	[UIView animateWithDuration:.1
 					 animations:^ {
 						 self.alpha = 0;
 					 } 
 					 completion:^(BOOL didFinish) {
 						 [self removeFromSuperview]; 
-					 }];
+					 }];	
+}
+
+- (void)done:(id)sender {
+	[self closeAndNotifyOfSelection:YES];
+}
+
+- (void)close:(id)sender {	
+	[self closeAndNotifyOfSelection:YES];
+}
+
+- (void)selectAll:(id)sender {
+	for(CHTag *tag in tags) {
+		if (!tag.selected) {
+			[tag toggle];
+		}
+	}
+}
+
+- (void)selectNone:(id)sender {
+	for(CHTag *tag in tags) {
+		if (tag.selected) {
+			[tag toggle];
+		}
+	}	
 }
 
 - (void)addTags {
@@ -83,6 +153,12 @@
 	const int LabelPadding = 10;
 	int startX = LeftRightMargin;
 	int startY = 70;
+	
+	if (!tags) {
+		tags = [[NSMutableArray alloc] init];
+	} else {
+		[tags removeAllObjects];
+	}
 	
 	for (int i=0; i<tagCount; i++) {
 		NSString *tagText = [self.datasource tagSelector:self tagForIndex:i];
@@ -100,6 +176,7 @@
 		label.layer.shadowColor = [UIColor blackColor].CGColor;
 		label.layer.shadowRadius = 10;
 		label.userInteractionEnabled = YES;
+		label.normalColor = [UIColor lightGrayColor];
 		label.highlightColor = [UIColor redColor];
 		
 		UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleTag:)];
@@ -115,6 +192,7 @@
 			startY += label.frame.size.height + LabelMargin;
 		}
 		[panelView addSubview:label];
+		[tags addObject:label];
 		[label release];
 	}
 }
@@ -123,9 +201,7 @@
 	NSLog(@"Sender: %@", sender);
 	UIGestureRecognizer *gestureRecognizer = sender;
 	CHTag *tag = (CHTag *)[gestureRecognizer view];
-	[tag toggle];
-
-	
+	[tag toggle];	
 	
 	if ([self.delegate respondsToSelector:@selector(tagSelector:didToggleTag:)]) {
 		[self.delegate tagSelector:self didToggleTag:tag];		
@@ -156,8 +232,20 @@
 	
 }
 
+- (BOOL)allSelected {
+	return [[self selectedTags] count] == [tags count];
+}
+
+- (BOOL)noneSelected {
+	return [[self selectedTags] count] == 0;
+}
+
+
 - (void)dealloc {
+	[tags release];
 	[panelView release];
+	[panelHeaderView release];
+	[titleLabel release];
 	datasource = nil;
 	delegate = nil;
 	
