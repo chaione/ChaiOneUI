@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B52CB2981386BCA300581E13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CB2971386BCA300581E13 /* UIKit.framework */; };
+		B52CB29A1386BCA300581E13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CB2991386BCA300581E13 /* Foundation.framework */; };
+		B52CB29C1386BCA300581E13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52CB29B1386BCA300581E13 /* CoreGraphics.framework */; };
+		B52CB2A21386BCA300581E13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B52CB2A01386BCA300581E13 /* InfoPlist.strings */; };
+		B52CB2A51386BCA300581E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CB2A41386BCA300581E13 /* main.m */; };
+		B52CB2A81386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CB2A71386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m */; };
+		B52CB2AB1386BCA300581E13 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CB2A91386BCA300581E13 /* MainWindow.xib */; };
+		B52CB2AE1386BCA300581E13 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CB2AD1386BCA300581E13 /* RootViewController.m */; };
+		B52CB2B11386BCA400581E13 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CB2AF1386BCA400581E13 /* RootViewController.xib */; };
+		B52CB2D61386BD1600581E13 /* TagSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CB2D41386BD1600581E13 /* TagSelectorViewController.m */; };
+		B52CB2D71386BD1600581E13 /* TagSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CB2D51386BD1600581E13 /* TagSelectorViewController.xib */; };
+		B5D5AFFD1387051F00288A92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5AFFC1387051F00288A92 /* CFNetwork.framework */; };
+		B5D5AFFF1387051F00288A92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5AFFE1387051F00288A92 /* QuartzCore.framework */; };
+		B5D5B0301387080F00288A92 /* libChaiOneUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CE716C1386FED600162C8A /* libChaiOneUI.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5CE716B1386FED600162C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ChaiOneUI;
+		};
+		B5CE716D1386FEE000162C8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ChaiOneUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B52CB2931386BCA300581E13 /* ChaiOneUISamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaiOneUISamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52CB2971386BCA300581E13 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B52CB2991386BCA300581E13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B52CB29B1386BCA300581E13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B52CB29F1386BCA300581E13 /* ChaiOneUISamples-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChaiOneUISamples-Info.plist"; sourceTree = "<group>"; };
+		B52CB2A11386BCA300581E13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B52CB2A31386BCA300581E13 /* ChaiOneUISamples-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChaiOneUISamples-Prefix.pch"; sourceTree = "<group>"; };
+		B52CB2A41386BCA300581E13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B52CB2A61386BCA300581E13 /* ChaiOneUISamplesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChaiOneUISamplesAppDelegate.h; sourceTree = "<group>"; };
+		B52CB2A71386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChaiOneUISamplesAppDelegate.m; sourceTree = "<group>"; };
+		B52CB2AA1386BCA300581E13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B52CB2AC1386BCA300581E13 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		B52CB2AD1386BCA300581E13 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B52CB2B01386BCA400581E13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		B52CB2D31386BD1600581E13 /* TagSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectorViewController.h; sourceTree = "<group>"; };
+		B52CB2D41386BD1600581E13 /* TagSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectorViewController.m; sourceTree = "<group>"; };
+		B52CB2D51386BD1600581E13 /* TagSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagSelectorViewController.xib; sourceTree = "<group>"; };
+		B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUI.xcodeproj; path = ../../ChaiOneUI.xcodeproj; sourceTree = "<group>"; };
+		B5D5AFFC1387051F00288A92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B5D5AFFE1387051F00288A92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B52CB2901386BCA300581E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52CB2981386BCA300581E13 /* UIKit.framework in Frameworks */,
+				B52CB29A1386BCA300581E13 /* Foundation.framework in Frameworks */,
+				B52CB29C1386BCA300581E13 /* CoreGraphics.framework in Frameworks */,
+				B5D5AFFD1387051F00288A92 /* CFNetwork.framework in Frameworks */,
+				B5D5AFFF1387051F00288A92 /* QuartzCore.framework in Frameworks */,
+				B5D5B0301387080F00288A92 /* libChaiOneUI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B52CB2881386BCA300581E13 = {
+			isa = PBXGroup;
+			children = (
+				B52CB2B71386BCAC00581E13 /* External */,
+				B52CB29D1386BCA300581E13 /* ChaiOneUISamples */,
+				B52CB2961386BCA300581E13 /* Frameworks */,
+				B52CB2941386BCA300581E13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B52CB2941386BCA300581E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B52CB2931386BCA300581E13 /* ChaiOneUISamples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B52CB2961386BCA300581E13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5D5AFFC1387051F00288A92 /* CFNetwork.framework */,
+				B5D5AFFE1387051F00288A92 /* QuartzCore.framework */,
+				B52CB2971386BCA300581E13 /* UIKit.framework */,
+				B52CB2991386BCA300581E13 /* Foundation.framework */,
+				B52CB29B1386BCA300581E13 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B52CB29D1386BCA300581E13 /* ChaiOneUISamples */ = {
+			isa = PBXGroup;
+			children = (
+				B52CB2D21386BCFC00581E13 /* Tag Selector */,
+				B52CB2A61386BCA300581E13 /* ChaiOneUISamplesAppDelegate.h */,
+				B52CB2A71386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m */,
+				B52CB2A91386BCA300581E13 /* MainWindow.xib */,
+				B52CB2AC1386BCA300581E13 /* RootViewController.h */,
+				B52CB2AD1386BCA300581E13 /* RootViewController.m */,
+				B52CB2AF1386BCA400581E13 /* RootViewController.xib */,
+				B52CB29E1386BCA300581E13 /* Supporting Files */,
+			);
+			path = ChaiOneUISamples;
+			sourceTree = "<group>";
+		};
+		B52CB29E1386BCA300581E13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B52CB29F1386BCA300581E13 /* ChaiOneUISamples-Info.plist */,
+				B52CB2A01386BCA300581E13 /* InfoPlist.strings */,
+				B52CB2A31386BCA300581E13 /* ChaiOneUISamples-Prefix.pch */,
+				B52CB2A41386BCA300581E13 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B52CB2B71386BCAC00581E13 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		B52CB2D21386BCFC00581E13 /* Tag Selector */ = {
+			isa = PBXGroup;
+			children = (
+				B52CB2D31386BD1600581E13 /* TagSelectorViewController.h */,
+				B52CB2D41386BD1600581E13 /* TagSelectorViewController.m */,
+				B52CB2D51386BD1600581E13 /* TagSelectorViewController.xib */,
+			);
+			name = "Tag Selector";
+			sourceTree = "<group>";
+		};
+		B5CE71611386FED600162C8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE716C1386FED600162C8A /* libChaiOneUI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B52CB2921386BCA300581E13 /* ChaiOneUISamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B52CB2B41386BCA400581E13 /* Build configuration list for PBXNativeTarget "ChaiOneUISamples" */;
+			buildPhases = (
+				B52CB28F1386BCA300581E13 /* Sources */,
+				B52CB2901386BCA300581E13 /* Frameworks */,
+				B52CB2911386BCA300581E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5CE716E1386FEE000162C8A /* PBXTargetDependency */,
+			);
+			name = ChaiOneUISamples;
+			productName = ChaiOneUISamples;
+			productReference = B52CB2931386BCA300581E13 /* ChaiOneUISamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B52CB28A1386BCA300581E13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = ChaiONE;
+			};
+			buildConfigurationList = B52CB28D1386BCA300581E13 /* Build configuration list for PBXProject "ChaiOneUISamples" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B52CB2881386BCA300581E13;
+			productRefGroup = B52CB2941386BCA300581E13 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B5CE71611386FED600162C8A /* Products */;
+					ProjectRef = B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B52CB2921386BCA300581E13 /* ChaiOneUISamples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B5CE716C1386FED600162C8A /* libChaiOneUI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libChaiOneUI.a;
+			remoteRef = B5CE716B1386FED600162C8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B52CB2911386BCA300581E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52CB2A21386BCA300581E13 /* InfoPlist.strings in Resources */,
+				B52CB2AB1386BCA300581E13 /* MainWindow.xib in Resources */,
+				B52CB2B11386BCA400581E13 /* RootViewController.xib in Resources */,
+				B52CB2D71386BD1600581E13 /* TagSelectorViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B52CB28F1386BCA300581E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52CB2A51386BCA300581E13 /* main.m in Sources */,
+				B52CB2A81386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m in Sources */,
+				B52CB2AE1386BCA300581E13 /* RootViewController.m in Sources */,
+				B52CB2D61386BD1600581E13 /* TagSelectorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5CE716E1386FEE000162C8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChaiOneUI;
+			targetProxy = B5CE716D1386FEE000162C8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B52CB2A01386BCA300581E13 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B52CB2A11386BCA300581E13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B52CB2A91386BCA300581E13 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B52CB2AA1386BCA300581E13 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B52CB2AF1386BCA400581E13 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B52CB2B01386BCA400581E13 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B52CB2B21386BCA400581E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B52CB2B31386BCA400581E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		B52CB2B51386BCA400581E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChaiOneUISamples/ChaiOneUISamples-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../../**";
+				INFOPLIST_FILE = "ChaiOneUISamples/ChaiOneUISamples-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"../../../**",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B52CB2B61386BCA400581E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChaiOneUISamples/ChaiOneUISamples-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../../**";
+				INFOPLIST_FILE = "ChaiOneUISamples/ChaiOneUISamples-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"../../../**",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B52CB28D1386BCA300581E13 /* Build configuration list for PBXProject "ChaiOneUISamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52CB2B21386BCA400581E13 /* Debug */,
+				B52CB2B31386BCA400581E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B52CB2B41386BCA400581E13 /* Build configuration list for PBXNativeTarget "ChaiOneUISamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52CB2B51386BCA400581E13 /* Debug */,
+				B52CB2B61386BCA400581E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B52CB28A1386BCA300581E13 /* Project object */;
+}

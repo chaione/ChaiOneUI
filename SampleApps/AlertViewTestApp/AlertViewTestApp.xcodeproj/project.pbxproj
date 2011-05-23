@@ -25,7 +25,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29044F2C131C630900426DCF /* ChaiOneUI.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libChaiOneUI.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ChaiOneUI;
 		};
 /* End PBXContainerItemProxy section */
