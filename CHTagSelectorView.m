@@ -51,7 +51,7 @@
 	
 	[self addSubview:closeButton];
 	
-	self.panelView = [[[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 280)] autorelease];
+	self.panelView = [[[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 320)] autorelease];
 	self.panelView.backgroundColor = [UIColor darkGrayColor];
 	self.panelView.layer.cornerRadius = 10;
 	self.panelView.autoresizesSubviews = YES;
@@ -66,14 +66,14 @@
 	[allButton setTitle:@"All" forState:UIControlStateNormal];
 	[allButton addTarget:self action:@selector(selectAll:) forControlEvents:UIControlEventTouchUpInside];
 	allButton.titleLabel.font = [UIFont systemFontOfSize:14];
-	allButton.frame = CGRectMake(168, 15, 40, 30);
+	allButton.frame = CGRectMake(160, 15, 40, 30);
 	[self.panelHeaderView addSubview:allButton];
 
 	UIButton *noneButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	[noneButton setTitle:@"None" forState:UIControlStateNormal];
 	[noneButton addTarget:self action:@selector(selectNone:) forControlEvents:UIControlEventTouchUpInside];
 	noneButton.titleLabel.font = [UIFont systemFontOfSize:14];
-	noneButton.frame = CGRectMake(210, 15, 40, 30);
+	noneButton.frame = CGRectMake(220, 15, 40, 30);
 	[self.panelHeaderView addSubview:noneButton];
 	
 	self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, 160, 60)] autorelease];
@@ -87,7 +87,7 @@
 	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	[doneButton setTitle:@"Done" forState:UIControlStateNormal];
 	[doneButton addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
-	doneButton.frame = CGRectMake(190, self.panelView.frame.size.height - 25, 80, 30);
+	doneButton.frame = CGRectMake(205, self.panelView.frame.size.height - 15, 80, 30);
 	doneButton.backgroundColor = [UIColor colorWithWhite:.2 alpha:1.0];
 	doneButton.layer.shadowColor = [[UIColor blackColor] CGColor];
 	doneButton.layer.shadowOffset = CGSizeMake(0, 1);
@@ -112,7 +112,7 @@
 		}
 	}
 
-	[UIView animateWithDuration:.1
+	[UIView animateWithDuration:.2
 					 animations:^ {
 						 self.alpha = 0;
 					 } 
@@ -150,7 +150,7 @@
 	
 	const int LeftRightMargin = 10;
 	const int LabelMargin = 5;
-	const int LabelPadding = 10;
+	const int LabelPadding = 15;
 	int startX = LeftRightMargin;
 	int startY = 70;
 	
@@ -164,7 +164,7 @@
 		NSString *tagText = [self.datasource tagSelector:self tagForIndex:i];
 		CHTag *label = [[CHTag alloc] init];
 		
-		label.font = [UIFont systemFontOfSize:12];
+		label.font = [UIFont systemFontOfSize:14];
 		label.shadowColor = [UIColor darkGrayColor];
 		label.textColor = [UIColor whiteColor];
 		label.shadowOffset = CGSizeMake(0, 1);
@@ -210,9 +210,7 @@
 
 - (void)presentInContainerView:(UIView *)view {
 	self.frame = view.bounds;
-	panelView.frame = CGRectInset(self.bounds, 20, 60);
-	
-	
+	panelView.frame = CGRectInset(self.bounds, 10, 30);
 	
 	self.alpha = 0;
 	panelView.center = CGPointMake(self.center.x, self.center.y + self.frame.size.height / 2);
