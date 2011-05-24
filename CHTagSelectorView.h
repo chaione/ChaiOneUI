@@ -36,11 +36,15 @@
 - (NSInteger)numberOfTagsInTagSelector:(CHTagSelectorView *)tagSelector;
 - (NSString *)tagSelector:(CHTagSelectorView *)tagSelector tagForIndex:(NSInteger)index;
 
+@optional
+
+- (void)customizeTag:(CHTag *)tag atIndex:(NSInteger)index;
+
 @end
 
 @protocol CHTagSelectorDelegate <NSObject>
 
-@optional;
+@optional
 
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didToggleTag:(CHTag *)tag;
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)tags;

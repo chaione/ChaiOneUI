@@ -162,38 +162,43 @@
 	
 	for (int i=0; i<tagCount; i++) {
 		NSString *tagText = [self.datasource tagSelector:self tagForIndex:i];
-		CHTag *label = [[CHTag alloc] init];
+		CHTag *tag = [[CHTag alloc] init];
 		
-		label.font = [UIFont systemFontOfSize:14];
-		label.shadowColor = [UIColor darkGrayColor];
-		label.textColor = [UIColor whiteColor];
-		label.shadowOffset = CGSizeMake(0, 1);
-		label.textAlignment = UITextAlignmentCenter;
-		label.backgroundColor = [UIColor lightGrayColor];
-		label.layer.cornerRadius = 6;
-		label.text = tagText;
-		label.tag = i;
-		label.layer.shadowColor = [UIColor blackColor].CGColor;
-		label.layer.shadowRadius = 10;
-		label.userInteractionEnabled = YES;
-		label.normalColor = [UIColor lightGrayColor];
-		label.highlightColor = [UIColor redColor];
+		tag.font = [UIFont systemFontOfSize:14];
+		tag.shadowColor = [UIColor darkGrayColor];
+		tag.textColor = [UIColor whiteColor];
+		tag.shadowOffset = CGSizeMake(0, 1);
+		tag.textAlignment = UITextAlignmentCenter;
+		tag.backgroundColor = [UIColor lightGrayColor];
+		tag.layer.cornerRadius = 6;
+		tag.text = tagText;
+		tag.tag = i;
+		tag.layer.shadowColor = [UIColor blackColor].CGColor;
+		tag.layer.shadowRadius = 10;
+		tag.userInteractionEnabled = YES;
+		tag.normalColor = [UIColor lightGrayColor];
+		tag.highlightColor = [UIColor redColor];
 		
 		UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleTag:)];
-		[label addGestureRecognizer:tapRecognizer];
+		[tag addGestureRecognizer:tapRecognizer];
 		[tapRecognizer release];
 		
-		CGSize size = [tagText sizeWithFont:label.font];
+		CGSize size = [tagText sizeWithFont:tag.font];
 		
-		label.frame = CGRectMake(startX, startY, size.width + LabelPadding, 30);
-		startX += label.frame.size.width + LabelMargin;
-		if (startX + label.frame.size.width >= panelView.frame.size.width - (2 * LeftRightMargin)) {
+		tag.frame = CGRectMake(startX, startY, size.width + LabelPadding, 30);
+		startX += tag.frame.size.width + LabelMargin;
+		if (startX + tag.frame.size.width >= panelView.frame.size.width - (2 * LeftRightMargin)) {
 			startX = LeftRightMargin;
-			startY += label.frame.size.height + LabelMargin;
+			startY += tag.frame.size.height + LabelMargin;
 		}
-		[panelView addSubview:label];
-		[tags addObject:label];
-		[label release];
+        
+        if ([self.datasource respondsToSelector:@selector(customizeTag:atIndex:)]) {
+            [self.datasource customizeTag:tag atIndex:i];
+        }
+        
+		[panelView addSubview:tag];
+		[tags addObject:tag];
+		[tag release];
 	}
 }
 
