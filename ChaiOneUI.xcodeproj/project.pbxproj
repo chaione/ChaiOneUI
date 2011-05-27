@@ -16,6 +16,8 @@
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
 		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; };
 		293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1A381309786200E97454 /* CHSplashScreenViewController.m */; };
+		8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */; };
+		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */; };
@@ -51,6 +53,8 @@
 		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		293A1A371309786200E97454 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
 		293A1A381309786200E97454 /* CHSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashScreenViewController.m; sourceTree = "<group>"; };
+		8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CHAdditions.h"; sourceTree = "<group>"; };
+		8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CHAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTagSelectorView.h; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		0867D691FE84028FC02AAC07 /* ChaiOneUI */ = {
 			isa = PBXGroup;
 			children = (
+				8DB6F4CB139029A200916F0E /* Categories */,
 				29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -153,6 +158,23 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		8DB6F4CB139029A200916F0E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8DB6F4CD139029AA00916F0E /* UILabel */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		8DB6F4CD139029AA00916F0E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */,
+				8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */,
+			);
+			name = UILabel;
+			sourceTree = "<group>";
+		};
 		B5D5AFAF1386BDC500288A92 /* CHTagSelector */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +198,7 @@
 				29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */,
 				B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */,
 				B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */,
+				8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +273,7 @@
 				29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */,
 				B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */,
 				B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */,
+				8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
