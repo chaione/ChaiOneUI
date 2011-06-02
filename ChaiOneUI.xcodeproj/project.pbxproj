@@ -297,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf $BUILD_DIR/current\nln -s $BUILT_PRODUCTS_DIR $BUILD_DIR/current";
+			shellScript = "rm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -347,6 +347,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = ChaiOneUI;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -367,6 +368,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = ChaiOneUI;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
