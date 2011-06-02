@@ -1,0 +1,29 @@
+# ChaiOneUI #
+
+This project houses some shared components that we find useful when building iOS applications at ChaiONE.  Currently, there's not much here as we're busy extracting things we find useful from our applications.
+
+## Getting the code ##
+
+Just add it as a submodule to your project.  We generally place these in a sister folder called lib.
+
+```
+git submodule add https://github.com/chaione/ChaiOneUI.git lib/ChaiOneUI
+```
+
+The project has its own submodule, so you'll need to `cd` into the directory and run:
+
+```
+git submodule update --init
+```
+
+## SDK Version ##
+
+This project is meant for iOS 4.0+ only.
+
+## Sample Apps ##
+
+Sample applications are provided to show usage.  Look in the Sample Apps folder.  
+
+## Contributing ##
+
+Fork the project, make your changes.  Send a pull request.  Please make sure to utilize the standard coding conventions that are in place (same as Apple's sample code).  Please provide a section in a Sample application to show how new components can be used.
