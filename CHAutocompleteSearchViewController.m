@@ -6,10 +6,10 @@
 //  Copyright 2011 ChaiONE. All rights reserved.
 //
 
-#import "AutocompleteSearchViewController.h"
+#import "CHAutocompleteSearchViewController.h"
 
 
-@implementation AutocompleteSearchViewController
+@implementation CHAutocompleteSearchViewController
 @synthesize  searchController;
 @synthesize suggestions;
 

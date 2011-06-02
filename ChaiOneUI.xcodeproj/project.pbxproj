@@ -16,9 +16,9 @@
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
 		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; };
 		293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1A381309786200E97454 /* CHSplashScreenViewController.m */; };
-		8D5FE3461396F353008D5D9A /* AutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE3421396F353008D5D9A /* AutocompleteSearchViewController.h */; };
-		8D5FE3471396F353008D5D9A /* AutocompleteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FE3431396F353008D5D9A /* AutocompleteSearchViewController.m */; };
-		8D5FE34B1396F3A2008D5D9A /* AutocompleteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE34A1396F3A2008D5D9A /* AutocompleteProtocol.h */; };
+		8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */; };
+		8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */; };
+		8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */; };
 		8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */; };
 		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
@@ -56,9 +56,9 @@
 		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		293A1A371309786200E97454 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
 		293A1A381309786200E97454 /* CHSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashScreenViewController.m; sourceTree = "<group>"; };
-		8D5FE3421396F353008D5D9A /* AutocompleteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutocompleteSearchViewController.h; sourceTree = "<group>"; };
-		8D5FE3431396F353008D5D9A /* AutocompleteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutocompleteSearchViewController.m; sourceTree = "<group>"; };
-		8D5FE34A1396F3A2008D5D9A /* AutocompleteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutocompleteProtocol.h; sourceTree = "<group>"; };
+		8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteSearchViewController.h; sourceTree = "<group>"; };
+		8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAutocompleteSearchViewController.m; sourceTree = "<group>"; };
+		8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteDelegate.h; sourceTree = "<group>"; };
 		8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CHAdditions.h"; sourceTree = "<group>"; };
 		8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CHAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -98,8 +98,8 @@
 		0867D691FE84028FC02AAC07 /* ChaiOneUI */ = {
 			isa = PBXGroup;
 			children = (
-				8DB6F4CB139029A200916F0E /* Categories */,
 				29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */,
+				8DB6F4CB139029A200916F0E /* Categories */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -123,10 +123,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8D5FE3381396F315008D5D9A /* AutocompleteViewController */,
+				8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */,
 				B5D5AFAF1386BDC500288A92 /* CHTagSelector */,
 				29044ED7131C60BE00426DCF /* CHLoginAlertViewController */,
-				293A1A361309781600E97454 /* SplashScreenViewController */,
+				293A1A361309781600E97454 /* CHSplashScreenViewController */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -148,12 +148,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		293A1A361309781600E97454 /* SplashScreenViewController */ = {
+		293A1A361309781600E97454 /* CHSplashScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
 				293A1A371309786200E97454 /* CHSplashScreenViewController.h */,
 				293A1A381309786200E97454 /* CHSplashScreenViewController.m */,
 			);
+			name = CHSplashScreenViewController;
 			path = SplashScreenViewController;
 			sourceTree = "<group>";
 		};
@@ -165,14 +166,14 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		8D5FE3381396F315008D5D9A /* AutocompleteViewController */ = {
+		8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8D5FE34A1396F3A2008D5D9A /* AutocompleteProtocol.h */,
-				8D5FE3421396F353008D5D9A /* AutocompleteSearchViewController.h */,
-				8D5FE3431396F353008D5D9A /* AutocompleteSearchViewController.m */,
+				8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */,
+				8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */,
+				8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */,
 			);
-			name = AutocompleteViewController;
+			name = CHAutocompleteViewController;
 			sourceTree = "<group>";
 		};
 		8DB6F4CB139029A200916F0E /* Categories */ = {
@@ -216,8 +217,8 @@
 				B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */,
 				B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */,
 				8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */,
-				8D5FE3461396F353008D5D9A /* AutocompleteSearchViewController.h in Headers */,
-				8D5FE34B1396F3A2008D5D9A /* AutocompleteProtocol.h in Headers */,
+				8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */,
+				8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +311,7 @@
 				B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */,
 				B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */,
 				8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */,
-				8D5FE3471396F353008D5D9A /* AutocompleteSearchViewController.m in Sources */,
+				8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

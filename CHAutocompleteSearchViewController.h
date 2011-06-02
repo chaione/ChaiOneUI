@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AutocompleteProtocol.h"
+#import "CHAutocompleteDelegate.h"
 
-@interface AutocompleteSearchViewController : UITableViewController <UISearchDisplayDelegate, AutocompleteDelegate> {
+@interface CHAutocompleteSearchViewController : UITableViewController <UISearchDisplayDelegate, CHAutocompleteDelegate> {
     
 }
 @property (nonatomic, retain) UISearchDisplayController *searchController;
