@@ -22,6 +22,7 @@
 	//adjust the label the the new height.
 	CGRect newFrame = self.frame;
 	newFrame.size.height = expectedLabelSize.height;
+    newFrame.size.width = expectedLabelSize.width;
 	self.frame = newFrame;
 	
 	self.text = text;	
