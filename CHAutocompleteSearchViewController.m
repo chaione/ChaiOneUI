@@ -54,14 +54,11 @@
 }
 
 -(void)setupUI {
-	UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [closeButton setImage:[UIImage imageNamed:@"btn-close.png"] forState:UIControlStateNormal];
-    closeButton.frame = CGRectMake(0, 0, 64, 33);
-    [closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+
+    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
     
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
-	self.navigationItem.leftBarButtonItem = button;
-	[button release];
+    self.navigationItem.leftBarButtonItem = closeButton;
+    [closeButton release];
     
     self.searchBar= [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     
