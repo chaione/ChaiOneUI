@@ -53,6 +53,11 @@
     return YES;
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self callAutocompleteAPI:textField.text];
+    return YES;
+}
+
 -(void)setupUI {
 
     UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
@@ -66,6 +71,7 @@
         if ([searchBarSubview conformsToProtocol:@protocol(UITextInputTraits)]) {
             @try {
                 [(UITextField *)searchBarSubview setReturnKeyType:UIReturnKeySearch];
+                [(UITextField *)searchBarSubview setDelegate:self];
             }
             @catch (NSException * e) {                
                 // ignore exception
@@ -125,9 +131,5 @@
     
     return cell;
 }
-
-
-
-
 
 @end
