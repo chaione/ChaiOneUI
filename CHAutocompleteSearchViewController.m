@@ -31,7 +31,7 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     
-    if ([searchString length] >= 3) {
+    if ([searchString length] >= 2) {
         [self callAutocompleteAPI:searchString];
     }
     
@@ -109,7 +109,7 @@
 
 -(void)suggestedResults:(NSMutableArray *)suggestedResults {
     self.suggestions = suggestedResults;
-    [self.tableView reloadData];
+    [self.searchDisplayController.searchResultsTableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
