@@ -67,6 +67,11 @@
     }
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self callAutocompleteAPI:textField.text];
+    return YES;
+}
+
 -(void)setupUI {
     UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" 
                                                                     style:UIBarButtonItemStyleBordered 
