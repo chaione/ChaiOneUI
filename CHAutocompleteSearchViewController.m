@@ -31,7 +31,7 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     
-    if ([searchString length] >= 2) {
+    if ([searchString length] >= 3) {
         [self callAutocompleteAPI:searchString];
     }
     
