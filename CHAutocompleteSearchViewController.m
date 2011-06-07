@@ -8,7 +8,6 @@
 
 #import "CHAutocompleteSearchViewController.h"
 
-
 @implementation CHAutocompleteSearchViewController
 @synthesize  searchController;
 @synthesize suggestions;
@@ -39,34 +38,22 @@
     return YES;
 }
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];    
     self.suggestions = [NSMutableArray array];
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.searchBar becomeFirstResponder];     
 }
+
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
     return YES;
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self callAutocompleteAPI:textField.text];
-    return YES;
-}
-
--(void)setupUI {
-
-    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
-    
-    self.navigationItem.leftBarButtonItem = closeButton;
-    [closeButton release];
-    
-    self.searchBar= [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-    
+- (void) hackToAddKeyboardSearchKey {
     for (UIView *searchBarSubview in [self.searchBar subviews]) {        
         if ([searchBarSubview conformsToProtocol:@protocol(UITextInputTraits)]) {
             @try {
@@ -78,13 +65,27 @@
             }
         }
     }
+}
+
+-(void)setupUI {
+    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" 
+                                                                    style:UIBarButtonItemStyleBordered 
+                                                                   target:self
+                                                                   action:@selector(close)];
+    self.navigationItem.leftBarButtonItem = closeButton;
+    [closeButton release];
     
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    self.searchBar.keyboardType = UIKeyboardTypeDefault;
+    
+    [self hackToAddKeyboardSearchKey];
+
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableHeaderView = searchBar;
     
-    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:nil];
+    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
     self.searchController.delegate = self;
     self.searchController.searchResultsDelegate = self;
     self.searchController.searchResultsDataSource = self;
@@ -106,14 +107,12 @@
     [self.tableView reloadData];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if ([self.suggestions count] == 0) {
         return 0;        
     }
     
     return 1;
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
