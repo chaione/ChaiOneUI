@@ -297,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"";
+			shellScript = "# Symlink build output to a common directory for easy referencing in other projects\nrm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"\n\n# Copy headers to a shared location as well\nmkdir -p \"$BUILD_DIR/current/headers\"\nfor file in `find . -name \"*.h\"`; do cp $file \"$BUILD_DIR/current/headers/\"; done;";
 		};
 /* End PBXShellScriptBuildPhase section */
 
