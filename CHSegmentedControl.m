@@ -83,7 +83,7 @@
     for (UIButton* button in _buttons) {
         if (button == selectedButton) {
             button.selected = YES;
-            button.highlighted = button.selected ? NO : YES;
+            button.highlighted = YES;
         } else {
             button.selected = NO;
             button.highlighted = NO;
