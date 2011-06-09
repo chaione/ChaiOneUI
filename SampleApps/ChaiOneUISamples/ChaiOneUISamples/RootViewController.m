@@ -8,11 +8,13 @@
 
 #import "RootViewController.h"
 #import "TagSelectorViewController.h"
+#import "CHSegmentedControlSampleViewController.h"
 
 @implementation RootViewController
 
 enum TableRows {
 	TableRow_TagSelector = 0,
+	TableRow_SegmentedControl,
 	TableRow_Count
 };
 
@@ -74,6 +76,9 @@ enum TableRows {
 		case TableRow_TagSelector:
 			cell.textLabel.text = @"Tag Selector";
 			break;
+		case TableRow_SegmentedControl:
+			cell.textLabel.text = @"Custom Segmented Control";
+			break;
 		default:
 			break;
 	}
@@ -84,10 +89,16 @@ enum TableRows {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	switch (indexPath.row) {
 		case TableRow_TagSelector: {
-				TagSelectorViewController *tagVC = [[TagSelectorViewController alloc] initWithNibName:@"TagSelectorViewController" bundle:nil];
+				TagSelectorViewController *tagVC = [[[TagSelectorViewController alloc] initWithNibName:@"TagSelectorViewController" bundle:nil] autorelease];
 				[self.navigationController pushViewController:tagVC animated:YES];
 			}
 			break;
+		case TableRow_SegmentedControl: {
+				CHSegmentedControlSampleViewController *segmentVC = [[[CHSegmentedControlSampleViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+				[self.navigationController pushViewController:segmentVC animated:YES];
+			}
+			break;
+			
 		default:
 			break;
 	}

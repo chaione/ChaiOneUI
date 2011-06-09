@@ -23,6 +23,10 @@
 		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */; };
+		B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */; };
+		B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */; };
+		B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */; };
 		B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */; };
 		B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */; };
 		B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB41386BE9100288A92 /* CHTag.h */; };
@@ -63,6 +67,10 @@
 		8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CHAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStretchableImageSegmentedControl.h; sourceTree = "<group>"; };
+		B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStretchableImageSegmentedControl.m; sourceTree = "<group>"; };
+		B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControl.h; sourceTree = "<group>"; };
+		B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
 		B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTagSelectorView.h; sourceTree = "<group>"; };
 		B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTagSelectorView.m; sourceTree = "<group>"; };
 		B5D5AFB41386BE9100288A92 /* CHTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTag.h; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B559BCEC13A0223400B22A74 /* CHSegmentedControl */,
 				8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */,
 				B5D5AFAF1386BDC500288A92 /* CHTagSelector */,
 				29044ED7131C60BE00426DCF /* CHLoginAlertViewController */,
@@ -193,6 +202,17 @@
 			name = UILabel;
 			sourceTree = "<group>";
 		};
+		B559BCEC13A0223400B22A74 /* CHSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */,
+				B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */,
+				B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */,
+				B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */,
+			);
+			name = CHSegmentedControl;
+			sourceTree = "<group>";
+		};
 		B5D5AFAF1386BDC500288A92 /* CHTagSelector */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +239,8 @@
 				8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */,
 				8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */,
 				8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */,
+				B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */,
+				B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +334,8 @@
 				B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */,
 				8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */,
 				8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */,
+				B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */,
+				B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

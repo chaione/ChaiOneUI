@@ -22,6 +22,10 @@
 		B5D5AFFD1387051F00288A92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5AFFC1387051F00288A92 /* CFNetwork.framework */; };
 		B5D5AFFF1387051F00288A92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5AFFE1387051F00288A92 /* QuartzCore.framework */; };
 		B5D5B0301387080F00288A92 /* libChaiOneUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CE716C1386FED600162C8A /* libChaiOneUI.a */; };
+		B5FF3CEE13A030A8001E3602 /* CHSegmentedControlSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FF3CED13A030A8001E3602 /* CHSegmentedControlSampleViewController.m */; };
+		B5FF3D2413A03491001E3602 /* bottombarblue.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF3D2113A03491001E3602 /* bottombarblue.png */; };
+		B5FF3D2513A03491001E3602 /* bottombarblue_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF3D2213A03491001E3602 /* bottombarblue_pressed.png */; };
+		B5FF3D2613A03491001E3602 /* blue-divider.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF3D2313A03491001E3602 /* blue-divider.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,11 @@
 		B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUI.xcodeproj; path = ../../ChaiOneUI.xcodeproj; sourceTree = "<group>"; };
 		B5D5AFFC1387051F00288A92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B5D5AFFE1387051F00288A92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B5FF3CEC13A030A8001E3602 /* CHSegmentedControlSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControlSampleViewController.h; sourceTree = "<group>"; };
+		B5FF3CED13A030A8001E3602 /* CHSegmentedControlSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControlSampleViewController.m; sourceTree = "<group>"; };
+		B5FF3D2113A03491001E3602 /* bottombarblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarblue.png; sourceTree = "<group>"; };
+		B5FF3D2213A03491001E3602 /* bottombarblue_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarblue_pressed.png; sourceTree = "<group>"; };
+		B5FF3D2313A03491001E3602 /* blue-divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-divider.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +96,7 @@
 			children = (
 				B52CB2B71386BCAC00581E13 /* External */,
 				B52CB29D1386BCA300581E13 /* ChaiOneUISamples */,
+				B5FF3D1013A031B6001E3602 /* Resources */,
 				B52CB2961386BCA300581E13 /* Frameworks */,
 				B52CB2941386BCA300581E13 /* Products */,
 				8DCFE267138AFF3E00BABE38 /* Default.png */,
@@ -116,6 +126,7 @@
 		B52CB29D1386BCA300581E13 /* ChaiOneUISamples */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF3CEA13A03081001E3602 /* Segmented Control */,
 				B52CB2D21386BCFC00581E13 /* Tag Selector */,
 				B52CB2A61386BCA300581E13 /* ChaiOneUISamplesAppDelegate.h */,
 				B52CB2A71386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m */,
@@ -163,6 +174,25 @@
 				B5CE716C1386FED600162C8A /* libChaiOneUI.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B5FF3CEA13A03081001E3602 /* Segmented Control */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF3CEC13A030A8001E3602 /* CHSegmentedControlSampleViewController.h */,
+				B5FF3CED13A030A8001E3602 /* CHSegmentedControlSampleViewController.m */,
+			);
+			name = "Segmented Control";
+			sourceTree = "<group>";
+		};
+		B5FF3D1013A031B6001E3602 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF3D2113A03491001E3602 /* bottombarblue.png */,
+				B5FF3D2213A03491001E3602 /* bottombarblue_pressed.png */,
+				B5FF3D2313A03491001E3602 /* blue-divider.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +267,9 @@
 				B52CB2B11386BCA400581E13 /* RootViewController.xib in Resources */,
 				B52CB2D71386BD1600581E13 /* TagSelectorViewController.xib in Resources */,
 				8DCFE268138AFF3E00BABE38 /* Default.png in Resources */,
+				B5FF3D2413A03491001E3602 /* bottombarblue.png in Resources */,
+				B5FF3D2513A03491001E3602 /* bottombarblue_pressed.png in Resources */,
+				B5FF3D2613A03491001E3602 /* blue-divider.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +284,7 @@
 				B52CB2A81386BCA300581E13 /* ChaiOneUISamplesAppDelegate.m in Sources */,
 				B52CB2AE1386BCA300581E13 /* RootViewController.m in Sources */,
 				B52CB2D61386BD1600581E13 /* TagSelectorViewController.m in Sources */,
+				B5FF3CEE13A030A8001E3602 /* CHSegmentedControlSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
