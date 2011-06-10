@@ -30,8 +30,9 @@
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    
-    if ([searchString length] >= 3) {
+    if ([searchString length] <= 1) {
+        self.suggestions = nil;
+    } else if ([searchString length] >= 3) {
         [self callAutocompleteAPI:searchString];
     }
     
