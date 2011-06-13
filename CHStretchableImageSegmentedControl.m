@@ -29,8 +29,7 @@ typedef enum {
     _stretchableImage           = [[backgroundImage stretchableImageWithLeftCapWidth:capWidth topCapHeight:0] retain];
     _stretchablePressedImage    = [[pressedImage    stretchableImageWithLeftCapWidth:capWidth topCapHeight:0] retain];
     _capWidth                   = capWidth;
-    _extendedDelegate           = delegate;
-    return [super initWithSegmentCount:buttonTitles.count segmentSize:size dividerImage:dividerImage tag:tag delegate:self];
+    return [super initWithSegmentCount:buttonTitles.count segmentSize:size dividerImage:dividerImage tag:tag delegate:delegate];
 }
 
 -(UIImage*)image:(UIImage*)image withCap:(CapLocation)location capWidth:(NSUInteger)capWidth buttonWidth:(NSUInteger)buttonWidth
@@ -53,8 +52,7 @@ typedef enum {
 	return resultImage;
 }
 
-- (UIButton *)buttonFor:(CHSegmentedControl *)segmentedControl atIndex:(NSUInteger)segmentIndex {
-    NSLog(@"Button for index: %d", segmentIndex);
+- (void)customizeButton:(UIButton *)button atIndex:(NSUInteger)segmentIndex {
 	NSArray* titles = _buttonTitles;
     
 	CapLocation location;
@@ -75,25 +73,20 @@ typedef enum {
 		buttonPressedImage = [self image:_stretchablePressedImage withCap:location capWidth:_capWidth buttonWidth:_segmentSize.width];
 	}
 	
-	UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-	button.frame = CGRectMake(0.0, 0.0, _segmentSize.width, _segmentSize.height);
-	
-	[button setTitle:[titles objectAtIndex:segmentIndex] forState:UIControlStateNormal];
+    [button setTitle:[titles objectAtIndex:segmentIndex] forState:UIControlStateNormal];
 	[button setBackgroundImage:buttonImage forState:UIControlStateNormal];
 	[button setBackgroundImage:buttonPressedImage forState:UIControlStateHighlighted];
 	[button setBackgroundImage:buttonPressedImage forState:UIControlStateSelected];
 	button.adjustsImageWhenHighlighted = NO;
 	
 	if (segmentIndex == 0)
-		button.selected = YES;
-	return button;
+		button.selected = YES;    
 }
 
 - (void)dealloc {
     [_buttonTitles release];
     [_stretchableImage release];
     [_stretchablePressedImage release];
-    _extendedDelegate = nil;
     [super dealloc];
 }
 

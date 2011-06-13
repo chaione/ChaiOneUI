@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CHSegmentedControl.h"
 
-@interface CHStretchableImageSegmentedControl : CHSegmentedControl <CHSegmentedControlDelegate> {
+@interface CHStretchableImageSegmentedControl : CHSegmentedControl {
     NSArray *_buttonTitles;
     UIImage *_stretchableImage;
     UIImage *_stretchablePressedImage;
     CGFloat _capWidth;
-    id<CHSegmentedControlDelegate> _extendedDelegate;
 }
 
 - (id)initWithButtonTitles:(NSArray *)buttonTitles 

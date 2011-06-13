@@ -27,6 +27,9 @@
                        tag:(NSInteger)tag
                   delegate:(id<CHSegmentedControlDelegate>)delegate;
 
+//Implement this method to customize the button in subclasses
+- (void)customizeButton:(UIButton *)button atIndex:(NSUInteger)segmentIndex;
+
 @end
 
 

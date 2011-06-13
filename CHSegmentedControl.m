@@ -48,6 +48,10 @@
     self.frame = CGRectMake(0, 0, width, _segmentSize.height);
 }
 
+- (void)customizeButton:(UIButton *)button atIndex:(NSUInteger)segmentIndex {
+    //intended to be overridden
+}
+
 - (void)setupButtons {
     _buttons = [[NSMutableArray alloc] initWithCapacity:_segmentCount];
     CGFloat horizontalOffset = 0;
@@ -64,6 +68,8 @@
         //position the button
         button.frame = CGRectMake(horizontalOffset, 0, _segmentSize.width, _segmentSize.height);
         horizontalOffset += _segmentSize.width;
+        
+        [self customizeButton:button atIndex:i];
         
         //add the divider
         BOOL onLastSegment = i == _segmentCount -1;
