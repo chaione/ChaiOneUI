@@ -12,6 +12,11 @@
 @protocol CHTagSelectorDataSource;
 @protocol CHTagSelectorDelegate;
 
+typedef enum {
+	CHTagSelectorTransitionStyleZoomIn,
+	CHTagSelectorTransitionStyleSlideIn
+} CHTagSelectorTransitionStyle;
+
 @interface CHTagSelectorView : UIView <UIGestureRecognizerDelegate> {
 	NSMutableArray *tags;
 }
@@ -19,7 +24,7 @@
 @property (nonatomic, retain) UIView *panelView;
 @property (nonatomic, retain) UIView *panelHeaderView;
 @property (nonatomic, retain) UILabel *titleLabel;
-
+@property (nonatomic, assign) CHTagSelectorTransitionStyle transitionStyle;
 @property (nonatomic, assign) id<CHTagSelectorDataSource>	datasource;
 @property (nonatomic, assign) id<CHTagSelectorDelegate>		delegate;
 
@@ -38,7 +43,8 @@
 
 @optional
 
-- (void)customizeTag:(CHTag *)tag atIndex:(NSInteger)index;
+//useful if you want to change the look & feel of individual tags
+- (void)tagSelector:(CHTagSelectorView *)tagSelector customizeTag:(CHTag *)tag atIndex:(NSInteger)index;
 
 @end
 
@@ -46,7 +52,10 @@
 
 @optional
 
+//called when a tag is tapped
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didToggleTag:(CHTag *)tag;
+
+//called when the panel closes.  Passes an array of CHTag instances.
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)tags;
 
 @end

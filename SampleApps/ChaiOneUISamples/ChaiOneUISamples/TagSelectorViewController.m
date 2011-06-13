@@ -69,8 +69,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 		
-	tags = [[NSArray arrayWithObjects:@"Rock", @"Blues", @"Jazz", @"Rap", @"Bluegrass", @"Folk", @"Alternative", @"Country", 
-			 @"Hip-Hop", @"Dance", @"Electronic", @"Funk", @"Metal", @"Pop", @"Punk", @"Bluegrass", @"Folk", @"Alternative", @"Country", 
+	tags = [[NSArray arrayWithObjects:@"Rock", //@"Blues", @"Jazz", @"Rap", @"Bluegrass", @"Folk", @"Alternative", @"Country", 
+//			 @"Hip-Hop", @"Dance", @"Electronic", @"Funk", @"Metal", @"Pop", @"Punk", @"Bluegrass", @"Folk", @"Alternative", @"Country", 
 			 @"Hip-Hop", @"Dance", @"Electronic", @"Funk", @"Metal", @"Pop", @"Punk",
 			 nil] retain];
 }

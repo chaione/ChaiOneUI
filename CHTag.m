@@ -42,10 +42,10 @@
 - (void)setSelected:(BOOL)selected_ {
     selected = selected_;
     UIColor *targetColor = self.selected ? self.highlightColor : self.normalColor;
-	[UIView animateWithDuration:.2
-					 animations:^ {
+//	[UIView animateWithDuration:.2
+//					 animations:^ {
 						 self.layer.backgroundColor = targetColor.CGColor;
-					 }];
+//					 }];
 }
 
 - (void)toggle {

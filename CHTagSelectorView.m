@@ -18,7 +18,7 @@
 
 @implementation CHTagSelectorView
 
-@synthesize delegate, datasource, panelView, panelHeaderView, titleLabel;
+@synthesize delegate, datasource, panelView, panelHeaderView, titleLabel, transitionStyle;
 
 - (id)init {
 	self = [super init];
@@ -42,6 +42,7 @@
 		return;
 	}
 	
+	self.transitionStyle = CHTagSelectorTransitionStyleZoomIn;
 	self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
 	
 	UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -89,11 +90,6 @@
 	[doneButton addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
 	doneButton.frame = CGRectMake(205, self.panelView.frame.size.height - 15, 80, 30);
 	doneButton.backgroundColor = [UIColor colorWithWhite:.2 alpha:1.0];
-	doneButton.layer.shadowColor = [[UIColor blackColor] CGColor];
-	doneButton.layer.shadowOffset = CGSizeMake(0, 1);
-	doneButton.layer.shadowOpacity = 0.5;
-	doneButton.layer.borderColor = [[UIColor darkGrayColor] CGColor];
-	doneButton.layer.cornerRadius = 6;
 	
 	[self.panelView addSubview:doneButton];
 }
@@ -165,17 +161,15 @@
 		CHTag *tag = [[CHTag alloc] init];
 		
 		tag.font = [UIFont systemFontOfSize:14];
-		tag.shadowColor = [UIColor darkGrayColor];
 		tag.textColor = [UIColor whiteColor];
+		tag.shadowColor = [UIColor darkGrayColor];
 		tag.shadowOffset = CGSizeMake(0, 1);
 		tag.textAlignment = UITextAlignmentCenter;
 		tag.backgroundColor = [UIColor lightGrayColor];
-		tag.layer.cornerRadius = 6;
 		tag.text = tagText;
 		tag.tag = i;
-		tag.layer.shadowColor = [UIColor blackColor].CGColor;
-		tag.layer.shadowRadius = 10;
 		tag.userInteractionEnabled = YES;
+		tag.layer.shouldRasterize = YES;
 		tag.normalColor = [UIColor lightGrayColor];
 		tag.highlightColor = [UIColor redColor];
 		
@@ -192,8 +186,8 @@
 			startY += tag.frame.size.height + LabelMargin;
 		}
         
-        if ([self.datasource respondsToSelector:@selector(customizeTag:atIndex:)]) {
-            [self.datasource customizeTag:tag atIndex:i];
+        if ([self.datasource respondsToSelector:@selector(tagSelector:customizeTag:atIndex:)]) {
+            [self.datasource tagSelector:self customizeTag:tag atIndex:i];
         }
         
 		[panelView addSubview:tag];
@@ -203,7 +197,6 @@
 }
 
 - (void)toggleTag:(id)sender {
-	NSLog(@"Sender: %@", sender);
 	UIGestureRecognizer *gestureRecognizer = sender;
 	CHTag *tag = (CHTag *)[gestureRecognizer view];
 	[tag toggle];	
@@ -217,22 +210,29 @@
 	self.frame = view.bounds;
 	panelView.frame = CGRectInset(self.bounds, 10, 30);
 	
-	self.alpha = 0;
-	panelView.center = CGPointMake(self.center.x, self.center.y + self.frame.size.height / 2);
-	
-	[self addTags];
-	
-	[self addSubview:panelView];
-	
+	//self.alpha = 0;
 
+	[self addTags];	
+	[self addSubview:panelView];
 	[view addSubview:self];	
 	
 	
-	[UIView animateWithDuration:.25 animations:^{
-		self.alpha = 1;
-		panelView.center = self.center;
-	}];
+	BOOL scaleTransition = YES;
+	panelView.center = self.center;
 	
+	if (scaleTransition) {
+		panelView.transform = CGAffineTransformMakeScale(.3, .3);
+		[UIView animateWithDuration:.25 animations:^{
+			self.alpha = 1;
+			panelView.transform = CGAffineTransformIdentity;
+		}];
+	} else {
+		panelView.center = CGPointMake(self.center.x, self.center.y + self.frame.size.height / 2);
+		[UIView animateWithDuration:.25 animations:^{
+			self.alpha = 1;
+			panelView.center = self.center;
+		}];
+	}	
 }
 
 - (BOOL)allSelected {
