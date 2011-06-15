@@ -75,12 +75,7 @@ typedef enum {
 	
     [button setTitle:[titles objectAtIndex:segmentIndex] forState:UIControlStateNormal];
 	[button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-	[button setBackgroundImage:buttonPressedImage forState:UIControlStateHighlighted];
 	[button setBackgroundImage:buttonPressedImage forState:UIControlStateSelected];
-	button.adjustsImageWhenHighlighted = NO;
-	
-	if (segmentIndex == 0)
-		button.selected = YES;    
 }
 
 - (void)dealloc {

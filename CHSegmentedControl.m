@@ -11,16 +11,12 @@
 @interface CHSegmentedControl ()
 - (void)calculateFrame;
 - (void)setupButtons;
+- (void)dimAllButtonsExcept:(UIButton *)selectedButton;
 @end
 
 @implementation CHSegmentedControl
 
-@synthesize delegate;
-
-//- (id)initWithFrame:(CGRect)frame {
-//    [NSException raise:@"Invalid initializer" format:@"The correct initializer is initWithSegmentCount:segmentSize:dividerImage:tag:delegate"];
-//    return nil;
-//}
+@synthesize delegate, selectedSegmentIndex;
 
 - (id)initWithSegmentCount:(NSInteger)count
                segmentSize:(CGSize)segmentSize 
@@ -42,7 +38,13 @@
     return self;
 }
 
-- (void) calculateFrame {
+- (void)setSelectedSegmentIndex:(NSInteger)index {
+    selectedSegmentIndex = index;
+    UIButton *button = [_buttons objectAtIndex:index];
+    [self dimAllButtonsExcept:button];
+}
+
+- (void)calculateFrame {
     //calculate the frame size based on the size of the segments & the divider images
     int width = _segmentSize.width * _segmentCount + _dividerImage.size.width * (_segmentCount - 1);
     self.frame = CGRectMake(0, 0, width, _segmentSize.height);
@@ -61,15 +63,16 @@
         //register for touch events
         [button addTarget:self action:@selector(touchDownAction:) forControlEvents:UIControlEventTouchDown];
         [button addTarget:self action:@selector(touchUpInsideAction:) forControlEvents:UIControlEventTouchUpInside];
-        [button addTarget:self action:@selector(otherTouchesAction:) forControlEvents:UIControlEventTouchUpOutside];
-        [button addTarget:self action:@selector(otherTouchesAction:) forControlEvents:UIControlEventTouchDragOutside];
-        [button addTarget:self action:@selector(otherTouchesAction:) forControlEvents:UIControlEventTouchDragInside];
         
         //position the button
         button.frame = CGRectMake(horizontalOffset, 0, _segmentSize.width, _segmentSize.height);
         horizontalOffset += _segmentSize.width;
         
         [self customizeButton:button atIndex:i];
+        
+        if (i == self.selectedSegmentIndex) {
+            button.selected = YES;
+        }
         
         //add the divider
         BOOL onLastSegment = i == _segmentCount -1;
@@ -82,37 +85,39 @@
         
         [self addSubview:button];
         [_buttons addObject:button];
-    }
+    }    
 }
 
 - (void)dimAllButtonsExcept:(UIButton *)selectedButton {
     for (UIButton* button in _buttons) {
         if (button == selectedButton) {
             button.selected = YES;
-            button.highlighted = YES;
         } else {
             button.selected = NO;
-            button.highlighted = NO;
         }
     }
 }
 
 - (void)touchDownAction:(UIButton *)button {
-    [self dimAllButtonsExcept:button];
-    
     if ([delegate respondsToSelector:@selector(touchDownAtSegmentIndex:)])
         [delegate touchDownAtSegmentIndex:[_buttons indexOfObject:button]];
 }
 
 - (void)touchUpInsideAction:(UIButton *)button {
+    selectedSegmentIndex = [_buttons indexOfObject:button];
+    
     [self dimAllButtonsExcept:button];
     
     if ([delegate respondsToSelector:@selector(touchUpInsideSegmentIndex:)])
         [delegate touchUpInsideSegmentIndex:[_buttons indexOfObject:button]];
 }
 
-- (void)otherTouchesAction:(UIButton *)button {
-    [self dimAllButtonsExcept:button];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    for (UIButton *button in _buttons) {
+        NSLog(@"Button (%@)... selected? %@", [[button titleLabel] text], [button isSelected] ? @"YES" : @"NO");
+    }
 }
 
 - (void)dealloc {

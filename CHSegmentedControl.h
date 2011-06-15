@@ -20,6 +20,7 @@
 }
 
 @property (nonatomic, assign) id<CHSegmentedControlDelegate> delegate;
+@property (nonatomic, assign) NSInteger selectedSegmentIndex;
 
 - (id)initWithSegmentCount:(NSInteger)count
                segmentSize:(CGSize)size 
