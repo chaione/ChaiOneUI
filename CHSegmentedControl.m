@@ -112,14 +112,6 @@
         [delegate touchUpInsideSegmentIndex:[_buttons indexOfObject:button]];
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    for (UIButton *button in _buttons) {
-        NSLog(@"Button (%@)... selected? %@", [[button titleLabel] text], [button isSelected] ? @"YES" : @"NO");
-    }
-}
-
 - (void)dealloc {
     self.delegate = nil;
     [_buttons release];
