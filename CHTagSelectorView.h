@@ -28,7 +28,6 @@ typedef enum {
 @property (nonatomic, assign) id<CHTagSelectorDataSource>	datasource;
 @property (nonatomic, assign) id<CHTagSelectorDelegate>		delegate;
 
-
 - (NSArray *)selectedTags;
 - (BOOL)allSelected;
 - (BOOL)noneSelected;
