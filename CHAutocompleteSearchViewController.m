@@ -73,13 +73,9 @@
 }
 
 -(void)setupUI {
-    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" 
-                                                                    style:UIBarButtonItemStyleBordered 
-                                                                   target:self
-                                                                   action:@selector(close)];
-    self.navigationItem.leftBarButtonItem = closeButton;
-    [closeButton release];
-    
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                           target:self 
+                                                                                           action:@selector(close)] autorelease];
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     self.searchBar.keyboardType = UIKeyboardTypeDefault;
     
