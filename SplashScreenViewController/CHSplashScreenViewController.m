@@ -26,6 +26,7 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 
 @synthesize window                      = _window;
 @synthesize transitionView              = _transitionView;
+@synthesize transitionViewController    = _transitionViewController;
 @synthesize duration                    = _duration;
 @synthesize defaultImage                = _defaultImage;
 @synthesize showsStatusBarOnDismissal   = _showsStatusBarOnDismissal;
@@ -46,6 +47,7 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 - (void)dealloc {
     [_defaultImage release];
 	[_transitionView release];
+    [_transitionViewController release];
 	[_window release];
     [super dealloc];
 }
@@ -95,7 +97,6 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 	return [NSString stringWithString:kCHSplashScreenDidEndFadeNotification];
 }
 
-
 #pragma mark -
 #pragma mark Public Methods
 
@@ -108,8 +109,8 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 	[UIView setAnimationDelegate:self];
 
 	[UIView setAnimationDuration:_duration];
-	[UIView setAnimationWillStartSelector:@selector(postBeginNotification)];
-	[UIView setAnimationDidStopSelector:@selector(finalizeTransition)];
+	[UIView setAnimationWillStartSelector:@selector(transitionDidBegin)];
+	[UIView setAnimationDidStopSelector:@selector(transitionDidEnd)];
 	self.view.alpha		= 0.0f;
 	[UIView commitAnimations];
 }
@@ -140,17 +141,19 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 
 - (void) finalizeTransition {
 	[[self view] removeFromSuperview];
+    [self.transitionViewController viewDidAppear:YES];
 	[self playTransitionSound];
 	[self postEndNotification];
 }
 
 
-- (void) postBeginNotification {
+- (void)transitionDidBegin {
+    [self.transitionViewController viewWillAppear:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kCHSplashScreenDidBeginFadeNotification object:nil];
 }
 
 
-- (void) postEndNotification {
+- (void)postEndNotification {
 	[[NSNotificationCenter defaultCenter] postNotificationName:kCHSplashScreenDidEndFadeNotification object:nil];
 }
 

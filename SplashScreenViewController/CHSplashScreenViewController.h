@@ -24,6 +24,7 @@ extern NSTimeInterval const kCHSplashScreenFadeDuration;
 @private
 	UIWindow*				_window;
 	UIView*					_transitionView;
+    UIViewController*       _transitionViewController;
 	NSTimeInterval			_duration;
     UIImage*                _defaultImage;
     BOOL                    _showsStatusBarOnDismissal;
@@ -31,6 +32,7 @@ extern NSTimeInterval const kCHSplashScreenFadeDuration;
 
 @property (nonatomic, retain) UIWindow* window;
 @property (nonatomic, retain) UIView* transitionView;
+@property (nonatomic, retain) UIViewController *transitionViewController;
 @property (nonatomic, assign) NSTimeInterval duration;
 @property (nonatomic, retain) UIImage *defaultImage;
 @property (nonatomic) BOOL showsStatusBarOnDismissal;
