@@ -33,6 +33,8 @@ typedef enum {
 - (BOOL)noneSelected;
 - (void)presentInContainerView:(UIView *)view;
 
+- (NSArray *)selectableTags;
+
 @end
 
 @protocol CHTagSelectorDataSource <NSObject>

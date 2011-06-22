@@ -28,6 +28,9 @@
 	return self;
 }
 
+- (NSArray *)selectableTags {
+    return [NSArray arrayWithArray:tags];
+}
 
 - (id)initWithFrame:(CGRect)frame {    
     self = [super initWithFrame:frame];
