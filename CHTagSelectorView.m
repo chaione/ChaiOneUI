@@ -13,6 +13,10 @@
 @interface CHTagSelectorView ()
 - (void)setupViews;
 - (void)closeAndNotifyOfSelection:(BOOL)notify;
+- (void)setupTags;
+
+@property (nonatomic, readonly) NSMutableArray *tags;
+
 @end
 
 
@@ -22,15 +26,20 @@
 
 - (id)init {
 	self = [super init];
-	if (self != nil) {
+	if (self) {
 		[self setupViews];
 	}
 	return self;
 }
 
-- (NSArray *)selectableTags {
-    return [NSArray arrayWithArray:tags];
+- (NSMutableArray *)tags {
+    if (!tags) {
+		tags = [[NSMutableArray alloc] init];
+        [self setupTags];
+	}
+    return tags;
 }
+
 
 - (id)initWithFrame:(CGRect)frame {    
     self = [super initWithFrame:frame];
@@ -98,7 +107,7 @@
 }
 
 - (NSArray *)selectedTags {
-	return [tags ch_select:^(id obj) {
+	return [self.tags ch_select:^(id obj) {
 		return [obj selected];
 	}];
 }
@@ -129,7 +138,7 @@
 }
 
 - (void)selectAll:(id)sender {
-	for(CHTag *tag in tags) {
+	for(CHTag *tag in self.tags) {
 		if (!tag.selected) {
 			[tag toggle];
 		}
@@ -137,29 +146,17 @@
 }
 
 - (void)selectNone:(id)sender {
-	for(CHTag *tag in tags) {
+	for(CHTag *tag in self.tags) {
 		if (tag.selected) {
 			[tag toggle];
 		}
 	}	
 }
 
-- (void)addTags {
-	NSInteger tagCount = [self.datasource numberOfTagsInTagSelector:self];
-	
-	const int LeftRightMargin = 10;
-	const int LabelMargin = 5;
-	const int LabelPadding = 15;
-	int startX = LeftRightMargin;
-	int startY = 70;
-	
-	if (!tags) {
-		tags = [[NSMutableArray alloc] init];
-	} else {
-		[tags removeAllObjects];
-	}
-	
-	for (int i=0; i<tagCount; i++) {
+- (void)setupTags {
+    NSInteger tagCount = [self.datasource numberOfTagsInTagSelector:self];
+
+    for (int i=0; i<tagCount; i++) {
 		NSString *tagText = [self.datasource tagSelector:self tagForIndex:i];
 		CHTag *tag = [[CHTag alloc] init];
 		
@@ -175,12 +172,35 @@
 		tag.layer.shouldRasterize = YES;
 		tag.normalColor = [UIColor lightGrayColor];
 		tag.highlightColor = [UIColor redColor];
+        
+		if ([self.datasource respondsToSelector:@selector(tagSelector:customizeTag:atIndex:)]) {
+            [self.datasource tagSelector:self customizeTag:tag atIndex:i];
+        }		
 		
-		UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleTag:)];
+		[self.tags addObject:tag];
+        
+        UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleTag:)];
 		[tag addGestureRecognizer:tapRecognizer];
 		[tapRecognizer release];
+        [panelView addSubview:tag];
+        
+   		[tag release];
+	}
+
+    NSLog(@"Selected tags: %@",[self selectedTags]);
+}
+
+- (void)layoutTags {
+	const int LeftRightMargin = 10;
+	const int LabelMargin = 5;
+	const int LabelPadding = 15;
+	int startX = LeftRightMargin;
+	int startY = 70;
 		
-		CGSize size = [tagText sizeWithFont:tag.font];
+	for (int i=0; i < [self.tags count]; i++) {
+		CHTag *tag = [self.tags objectAtIndex:i];
+
+		CGSize size = [tag.text sizeWithFont:tag.font];
 		
 		tag.frame = CGRectMake(startX, startY, size.width + LabelPadding, 30);
 		startX += tag.frame.size.width + LabelMargin;
@@ -189,13 +209,6 @@
 			startY += tag.frame.size.height + LabelMargin;
 		}
         
-        if ([self.datasource respondsToSelector:@selector(tagSelector:customizeTag:atIndex:)]) {
-            [self.datasource tagSelector:self customizeTag:tag atIndex:i];
-        }
-        
-		[panelView addSubview:tag];
-		[tags addObject:tag];
-		[tag release];
 	}
 }
 
@@ -212,10 +225,8 @@
 - (void)presentInContainerView:(UIView *)view {
 	self.frame = view.bounds;
 	panelView.frame = CGRectInset(self.bounds, 10, 30);
-	
-	//self.alpha = 0;
 
-	[self addTags];	
+	[self layoutTags];	
 	[self addSubview:panelView];
 	[view addSubview:self];	
 	
@@ -239,7 +250,7 @@
 }
 
 - (BOOL)allSelected {
-	return [[self selectedTags] count] == [tags count];
+	return [[self selectedTags] count] == [self.tags count];
 }
 
 - (BOOL)noneSelected {
