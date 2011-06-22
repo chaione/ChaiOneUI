@@ -186,8 +186,6 @@
         
    		[tag release];
 	}
-
-    NSLog(@"Selected tags: %@",[self selectedTags]);
 }
 
 - (void)layoutTags {
