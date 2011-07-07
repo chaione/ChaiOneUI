@@ -46,7 +46,7 @@
 
 - (void)calculateFrame {
     //calculate the frame size based on the size of the segments & the divider images
-    int width = _segmentSize.width * _segmentCount + _dividerImage.size.width * (_segmentCount - 1);
+    int width = _segmentSize.width * _segmentCount;
     self.frame = CGRectMake(0, 0, width, _segmentSize.height);
 }
 
@@ -73,19 +73,18 @@
         if (i == self.selectedSegmentIndex) {
             button.selected = YES;
         }
-        
-        //add the divider
-        BOOL onLastSegment = i == _segmentCount -1;
-        if  (!onLastSegment) {
-            UIImageView *divider = [[[UIImageView alloc] initWithImage:_dividerImage] autorelease];
-            divider.frame = CGRectMake(horizontalOffset, 0, _dividerImage.size.width, _dividerImage.size.height);
-            [self addSubview:divider];
-            horizontalOffset += _dividerImage.size.width;
-        }
-        
+                
         [self addSubview:button];
         [_buttons addObject:button];
     }    
+    
+    horizontalOffset = _segmentSize.width;
+    for (int i = 0; i <_segmentCount; i++) {
+        UIImageView *divider = [[[UIImageView alloc] initWithImage:_dividerImage] autorelease];
+        divider.frame = CGRectMake(horizontalOffset, 0, _dividerImage.size.width, _dividerImage.size.height);
+        [self addSubview:divider];
+        horizontalOffset += _segmentSize.width;
+    }
 }
 
 - (void)dimAllButtonsExcept:(UIButton *)selectedButton {
