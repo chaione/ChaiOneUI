@@ -10,6 +10,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    // CHDividerStyleOverlay indicates that the dividers are laid on top of the button graphics, and are not used to 
+    // calculate the frame's width.
+    CHDividerStyleOverlay = 0,
+    
+    // CHDividerStyleInline indicates that the dividers are inserted in between each button, and help
+    // account for the frame's width.
+    CHDividerStyleInline
+} CHSegmentedControlDividerStyle;
+
 @protocol CHSegmentedControlDelegate;
 
 @interface CHSegmentedControl : UIView {
@@ -19,6 +29,7 @@
     UIImage *_dividerImage;
 }
 
+@property (nonatomic, assign) CHSegmentedControlDividerStyle dividerStyle;
 @property (nonatomic, assign) id<CHSegmentedControlDelegate> delegate;
 @property (nonatomic, assign) NSInteger selectedSegmentIndex;
 

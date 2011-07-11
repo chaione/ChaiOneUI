@@ -16,7 +16,7 @@
 
 @implementation CHSegmentedControl
 
-@synthesize delegate, selectedSegmentIndex;
+@synthesize delegate, selectedSegmentIndex, dividerStyle;
 
 - (id)initWithSegmentCount:(NSInteger)count
                segmentSize:(CGSize)segmentSize 
@@ -31,11 +31,19 @@
         _segmentCount = count;
         _segmentSize = segmentSize;
         _dividerImage = [dividerImage retain];
-        
-        [self calculateFrame];
-        [self setupButtons];
+        self.dividerStyle = CHDividerStyleInline;
     }
+    
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (!_buttons) {
+        [self calculateFrame];
+        [self setupButtons];   
+    }
 }
 
 - (void)setSelectedSegmentIndex:(NSInteger)index {
@@ -46,7 +54,12 @@
 
 - (void)calculateFrame {
     //calculate the frame size based on the size of the segments & the divider images
+    
     int width = _segmentSize.width * _segmentCount;
+    if (self.dividerStyle == CHDividerStyleInline) {
+        width += _dividerImage.size.width * (_segmentCount - 1);
+    }
+
     self.frame = CGRectMake(0, 0, width, _segmentSize.height);
 }
 
@@ -73,17 +86,29 @@
         if (i == self.selectedSegmentIndex) {
             button.selected = YES;
         }
+
+        if (self.dividerStyle == CHDividerStyleInline) {
+            BOOL onLastSegment = i == _segmentCount -1;
+            if  (!onLastSegment) {
+                UIImageView *divider = [[[UIImageView alloc] initWithImage:_dividerImage] autorelease];
+                divider.frame = CGRectMake(horizontalOffset, 0, _dividerImage.size.width, _dividerImage.size.height);
+                [self addSubview:divider];
+                horizontalOffset += _dividerImage.size.width;
+            }
+        }
                 
         [self addSubview:button];
         [_buttons addObject:button];
     }    
     
-    horizontalOffset = _segmentSize.width;
-    for (int i = 0; i <_segmentCount; i++) {
-        UIImageView *divider = [[[UIImageView alloc] initWithImage:_dividerImage] autorelease];
-        divider.frame = CGRectMake(horizontalOffset, 0, _dividerImage.size.width, _dividerImage.size.height);
-        [self addSubview:divider];
-        horizontalOffset += _segmentSize.width;
+    if (self.dividerStyle == CHDividerStyleOverlay) {
+        horizontalOffset = _segmentSize.width;
+        for (int i = 0; i <_segmentCount; i++) {
+            UIImageView *divider = [[[UIImageView alloc] initWithImage:_dividerImage] autorelease];
+            divider.frame = CGRectMake(horizontalOffset, 0, _dividerImage.size.width, _dividerImage.size.height);
+            [self addSubview:divider];
+            horizontalOffset += _segmentSize.width;
+        }
     }
 }
 
