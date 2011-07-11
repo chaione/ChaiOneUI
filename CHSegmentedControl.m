@@ -37,11 +37,15 @@
     return self;
 }
 
+- (void)setDividerStyle:(CHSegmentedControlDividerStyle)newDividerStyle {
+    dividerStyle = newDividerStyle;
+    [self calculateFrame];
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
     if (!_buttons) {
-        [self calculateFrame];
         [self setupButtons];   
     }
 }
