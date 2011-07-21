@@ -12,6 +12,10 @@
 @implementation UILabel (CHAdditions)
 
 -(void)resizeToFitText:(NSString *)text maxSize:(CGSize)maxSize {
+    if ([text isKindOfClass:[NSNull class]]) {
+        text = @"";
+    }
+    
 	self.numberOfLines = 0;
 	self.lineBreakMode = UILineBreakModeWordWrap;
     
