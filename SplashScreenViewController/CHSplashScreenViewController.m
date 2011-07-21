@@ -148,15 +148,7 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 
 - (void) finalizeTransition {
     [self.transitionViewController viewDidAppear:YES];
-    
-    if (self.showsStatusBarOnDismissal && [self.transitionViewController isKindOfClass:[UINavigationController class]]) {
-        // Due to a display bug in iOS you cannot animate in a status bar and the navigation bar at the same time.
-        // Toggling visibility corrects the frame of the navigation controller so they don't overlap.
-        UINavigationController *navigationController = (UINavigationController *)self.transitionViewController;
-        [navigationController setNavigationBarHidden:YES];
-        [navigationController setNavigationBarHidden:NO];
-    }
-    
+        
 	[[self view] removeFromSuperview];
 	[self playTransitionSound];
 	[self postEndNotification];
@@ -164,7 +156,14 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 
 
 - (void)transitionDidBegin {
+    // Due to a display bug in iOS you cannot animate in a status bar and the navigation bar at the same time.
+    // Instead, we will set the frame to account for the status bar offset when the transition begins.
+
     [self.transitionViewController viewWillAppear:YES];
+    CGRect frame = self.transitionViewController.view.frame;
+    frame.origin.y += 20;
+    frame.size.height -=20;
+    self.transitionViewController.view.frame = frame;
 	[[NSNotificationCenter defaultCenter] postNotificationName:kCHSplashScreenDidBeginFadeNotification object:nil];
 }
 
