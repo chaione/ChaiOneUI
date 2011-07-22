@@ -262,7 +262,6 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
-				B5339EF013968214000AF245 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,22 +316,6 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		B5339EF013968214000AF245 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Symlink build output to a common directory for easy referencing in other projects\nrm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"\n\n# Copy headers to a shared location as well\nmkdir -p \"$BUILD_DIR/current/headers\"\nfor file in `find . -name \"*.h\"`; do cp $file \"$BUILD_DIR/current/headers/\"; done;";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -373,7 +356,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = ChaiOneUI;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(BUILT_PRODUCTS_DIR)/Headers";
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -395,7 +378,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = ChaiOneUI;
-				PUBLIC_HEADERS_FOLDER_PATH = "$(BUILT_PRODUCTS_DIR)/Headers";
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
