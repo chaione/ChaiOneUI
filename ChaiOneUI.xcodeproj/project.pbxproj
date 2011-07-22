@@ -29,6 +29,8 @@
 		B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */; };
 		B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */ = {isa = PBXBuildFile; fileRef = B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */; };
+		B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */; };
 		B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */; };
 		B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB41386BE9100288A92 /* CHTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +70,8 @@
 		B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
 		B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+CHSimpleAlerts.h"; sourceTree = "<group>"; };
 		B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+CHSimpleAlerts.m"; sourceTree = "<group>"; };
+		B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+CHAdditions.h"; path = "../../../UITableView+CHAdditions.h"; sourceTree = "<group>"; };
+		B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+CHAdditions.m"; path = "../../../UITableView+CHAdditions.m"; sourceTree = "<group>"; };
 		B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTagSelectorView.h; sourceTree = "<group>"; };
 		B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTagSelectorView.m; sourceTree = "<group>"; };
 		B5D5AFB41386BE9100288A92 /* CHTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTag.h; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		8DB6F4CB139029A200916F0E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B58B120813D9FF94000C1663 /* UITableView */,
 				B55F8DBF13D8F5AF00A8F861 /* UIAlertView */,
 				8DB6F4CD139029AA00916F0E /* UILabel */,
 			);
@@ -220,6 +225,16 @@
 			name = UIAlertView;
 			sourceTree = "<group>";
 		};
+		B58B120813D9FF94000C1663 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */,
+				B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */,
+			);
+			name = UITableView;
+			path = External/ChaiOneUtils/Categories;
+			sourceTree = "<group>";
+		};
 		B5D5AFAF1386BDC500288A92 /* CHTagSelector */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +263,7 @@
 				B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */,
 				B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */,
 				B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */,
+				B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +346,7 @@
 				B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */,
 				B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */,
 				B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */,
+				B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
