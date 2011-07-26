@@ -81,9 +81,6 @@
     
     [self hackToAddKeyboardSearchKey];
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStylePlain];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     self.tableView.tableHeaderView = searchBar;
     
     self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
@@ -103,7 +100,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
--(void)suggestedResults:(NSMutableArray *)suggestedResults {
+- (void)suggestedResults:(NSMutableArray *)suggestedResults page:(int)pageNumber {
     self.suggestions = suggestedResults;
     [self.searchDisplayController.searchResultsTableView reloadData];
 }
