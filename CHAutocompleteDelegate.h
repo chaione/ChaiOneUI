@@ -10,7 +10,7 @@
 
 @protocol CHAutocompleteDelegate
 
--(void)suggestedResults:(NSMutableArray *)suggestedResults;
+-(void)suggestedResults:(NSMutableArray *)suggestedResults page:(int)pageNumber;
 
 @end
 
