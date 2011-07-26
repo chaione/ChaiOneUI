@@ -14,6 +14,8 @@
 		29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F0D131C625700426DCF /* libChaiOneUtils.a */; };
 		29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F17131C62BF00426DCF /* UIKit.framework */; };
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
+		292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */; };
+		292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */; };
 		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1A381309786200E97454 /* CHSplashScreenViewController.m */; };
 		8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +57,8 @@
 		29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUtils.xcodeproj; path = External/ChaiOneUtils/ChaiOneUtils.xcodeproj; sourceTree = "<group>"; };
 		29044F17131C62BF00426DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPickerViewSensitiveScrollView.h; sourceTree = "<group>"; };
+		292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPickerViewSensitiveScrollView.m; sourceTree = "<group>"; };
 		293A1A371309786200E97454 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
 		293A1A381309786200E97454 /* CHSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashScreenViewController.m; sourceTree = "<group>"; };
 		8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteSearchViewController.h; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */,
 				B559BCEC13A0223400B22A74 /* CHSegmentedControl */,
 				8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */,
 				B5D5AFAF1386BDC500288A92 /* CHTagSelector */,
@@ -166,6 +171,15 @@
 			);
 			name = CHSplashScreenViewController;
 			path = SplashScreenViewController;
+			sourceTree = "<group>";
+		};
+		299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */,
+				292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */,
+			);
+			name = CHPickerViewSensitiveScrollView;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -265,6 +279,7 @@
 				B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */,
 				B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
+				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +309,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0420;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ChaiOneUI" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -347,6 +362,7 @@
 				B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */,
 				B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */,
 				B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */,
+				292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
