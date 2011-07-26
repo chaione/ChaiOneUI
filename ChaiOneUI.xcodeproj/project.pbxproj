@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */; };
+		29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */; };
 		29044EF0131C612900426DCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EEF131C612900426DCF /* CFNetwork.framework */; };
 		29044EF2131C613000426DCF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EF1131C613000426DCF /* CoreFoundation.framework */; };
 		29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F0D131C625700426DCF /* libChaiOneUtils.a */; };
 		29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F17131C62BF00426DCF /* UIKit.framework */; };
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
-		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; };
+		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1A381309786200E97454 /* CHSplashScreenViewController.m */; };
-		8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */; };
+		8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */; };
-		8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */; };
-		8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */; };
+		8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */; };
+		B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */; };
-		B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */; };
+		B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */; };
-		B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */; };
+		B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */ = {isa = PBXBuildFile; fileRef = B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */; };
+		B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */; };
+		B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */; };
-		B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB41386BE9100288A92 /* CHTag.h */; };
+		B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB41386BE9100288A92 /* CHTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB51386BE9100288A92 /* CHTag.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,10 @@
 		B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStretchableImageSegmentedControl.m; sourceTree = "<group>"; };
 		B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControl.h; sourceTree = "<group>"; };
 		B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
+		B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+CHSimpleAlerts.h"; sourceTree = "<group>"; };
+		B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+CHSimpleAlerts.m"; sourceTree = "<group>"; };
+		B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+CHAdditions.h"; path = "../../../UITableView+CHAdditions.h"; sourceTree = "<group>"; };
+		B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+CHAdditions.m"; path = "../../../UITableView+CHAdditions.m"; sourceTree = "<group>"; };
 		B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTagSelectorView.h; sourceTree = "<group>"; };
 		B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTagSelectorView.m; sourceTree = "<group>"; };
 		B5D5AFB41386BE9100288A92 /* CHTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTag.h; sourceTree = "<group>"; };
@@ -181,6 +189,8 @@
 		8DB6F4CB139029A200916F0E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B58B120813D9FF94000C1663 /* UITableView */,
+				B55F8DBF13D8F5AF00A8F861 /* UIAlertView */,
 				8DB6F4CD139029AA00916F0E /* UILabel */,
 			);
 			name = Categories;
@@ -206,6 +216,25 @@
 			name = CHSegmentedControl;
 			sourceTree = "<group>";
 		};
+		B55F8DBF13D8F5AF00A8F861 /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */,
+				B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */,
+			);
+			name = UIAlertView;
+			sourceTree = "<group>";
+		};
+		B58B120813D9FF94000C1663 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */,
+				B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */,
+			);
+			name = UITableView;
+			path = External/ChaiOneUtils/Categories;
+			sourceTree = "<group>";
+		};
 		B5D5AFAF1386BDC500288A92 /* CHTagSelector */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +253,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */,
 				29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */,
 				B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */,
@@ -234,6 +262,9 @@
 				8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */,
 				B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */,
 				B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */,
+				B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */,
+				B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +278,6 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
-				B5339EF013968214000AF245 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -302,22 +332,6 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		B5339EF013968214000AF245 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Symlink build output to a common directory for easy referencing in other projects\nrm -rf \"$BUILD_DIR/current\"\nln -s \"$BUILT_PRODUCTS_DIR\" \"$BUILD_DIR/current\"\n\n# Copy headers to a shared location as well\nmkdir -p \"$BUILD_DIR/current/headers\"\nfor file in `find . -name \"*.h\"`; do cp $file \"$BUILD_DIR/current/headers/\"; done;";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,6 +345,8 @@
 				8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */,
 				B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */,
 				B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */,
+				B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */,
+				B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +373,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = ChaiOneUI;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -378,6 +395,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = ChaiOneUI;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
