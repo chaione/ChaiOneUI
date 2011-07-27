@@ -100,7 +100,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)suggestedResults:(NSMutableArray *)suggestedResults page:(int)pageNumber {
+-(void)suggestedResults:(NSMutableArray *)suggestedResults page:(int)pageNumber {
     self.suggestions = suggestedResults;
     [self.searchDisplayController.searchResultsTableView reloadData];
 }
