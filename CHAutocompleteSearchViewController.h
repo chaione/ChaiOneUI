@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CHAutocompleteDelegate.h"
 
-@interface CHAutocompleteSearchViewController : UITableViewController <UISearchDisplayDelegate, CHAutocompleteDelegate, UITextFieldDelegate> {
+@interface CHAutocompleteSearchViewController : UITableViewController <UISearchDisplayDelegate, CHAutocompleteDelegate, UITextFieldDelegate, UISearchBarDelegate> {
     
 }
 @property (nonatomic, retain) UISearchDisplayController *searchController;

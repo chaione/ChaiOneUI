@@ -22,6 +22,7 @@
 }
 
 -(void)close {
+    NSLog(@"CHAutocompleteSearchViewController close method defaults to dismissing modal. You should override this method if needed in your subclass.");
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -67,8 +68,13 @@
     }
 }
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)aSearchBar {
+    [aSearchBar resignFirstResponder];
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self callAutocompleteAPI:textField.text];
+    [self searchBarCancelButtonClicked:self.searchBar];
     return YES;
 }
 
@@ -77,6 +83,7 @@
                                                                                            target:self 
                                                                                            action:@selector(close)] autorelease];
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    self.searchBar.delegate = self;
     self.searchBar.keyboardType = UIKeyboardTypeDefault;
     
     [self hackToAddKeyboardSearchKey];
