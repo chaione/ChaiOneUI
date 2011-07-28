@@ -30,12 +30,18 @@
     NSLog(@"CHAutocompleteSearchViewController callAutocompleteAPI called. You need to override this method in your subclass.");
 }
 
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    if ([searchString length] <= 1) {
-        self.suggestions = nil;
-    } else if ([searchString length] >= 3) {
-        [self callAutocompleteAPI:searchString];
+- (void)manageAutocompletionBehaviorForString:(NSString *)query {
+    int length = [query length];
+    NSLog(@"length: %d",length);
+    if (length >= 3) {
+        NSLog(@"Calling api");
+        [self callAutocompleteAPI:query];
     }
+
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self manageAutocompletionBehaviorForString:searchString];
     
     return YES;
 }
@@ -73,6 +79,7 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"should return?");
     [self callAutocompleteAPI:textField.text];
     [self.searchBar resignFirstResponder];
     return YES;

@@ -21,5 +21,6 @@
 -(void)suggestionChosen:(NSString *)suggestion;
 
 - (void)hackToAddKeyboardSearchKey;
+- (void)manageAutocompletionBehaviorForString:(NSString *)query;
 
 @end
