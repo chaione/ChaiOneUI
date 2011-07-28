@@ -74,7 +74,7 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self callAutocompleteAPI:textField.text];
-    [self searchBarCancelButtonClicked:self.searchBar];
+    [self.searchBar resignFirstResponder];
     return YES;
 }
 
