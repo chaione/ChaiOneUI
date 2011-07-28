@@ -26,7 +26,7 @@
 }
 
 -(void)callAutocompleteAPI:(NSString *)searchString  {
-    NSLog(@"Subclass this class!");
+    NSLog(@"CHAutocompleteSearchViewController callAutocompleteAPI called. You need to override this method in your subclass.");
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
