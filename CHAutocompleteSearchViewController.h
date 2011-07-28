@@ -20,4 +20,6 @@
 -(void)callAutocompleteAPI:(NSString *)searchString;
 -(void)suggestionChosen:(NSString *)suggestion;
 
+- (void)hackToAddKeyboardSearchKey;
+
 @end
