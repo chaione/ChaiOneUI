@@ -32,9 +32,7 @@
 
 - (void)manageAutocompletionBehaviorForString:(NSString *)query {
     int length = [query length];
-    NSLog(@"length: %d",length);
-    if (length >= 3) {
-        NSLog(@"Calling api");
+    if (length >= 2) {
         [self callAutocompleteAPI:query];
     }
 
