@@ -77,7 +77,6 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"should return?");
     [self callAutocompleteAPI:textField.text];
     [self.searchBar resignFirstResponder];
     return YES;
