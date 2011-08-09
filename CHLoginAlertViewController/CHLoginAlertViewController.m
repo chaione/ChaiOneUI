@@ -94,7 +94,7 @@
 	else {
 		// Show the username field as a UILabel
 		if (!_usernameLabel) {
-			_usernameLabel			= [[UITextField alloc] initWithFrame:CGRectMake(12.0f, 48.0f, 260.0f, 25.0f)];
+			_usernameLabel			= [[UILabel alloc] initWithFrame:CGRectMake(12.0f, 48.0f, 260.0f, 25.0f)];
 			[_usernameLabel setFont:[UIFont systemFontOfSize:14.0f]];
 			[_usernameLabel setTextColor:[UIColor whiteColor]];
 			[_usernameLabel setTextAlignment:UITextAlignmentCenter];
