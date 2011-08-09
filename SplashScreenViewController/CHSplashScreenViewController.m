@@ -140,7 +140,7 @@ NSTimeInterval const kCHSplashScreenFadeDuration		= 1.0;
 	// 7.) Add view to window
 	
 	// Test code
-	UIImageView*	defaultImgView	= [[UIImageView alloc] initWithFrame:[[self window] frame]];
+	UIImageView*	defaultImgView	= [[[UIImageView alloc] initWithFrame:[[self window] frame]] autorelease];
 	[defaultImgView setImage:[self defaultImage]];
 	[[self view] addSubview:defaultImgView];
 	[_window addSubview:[self view]];

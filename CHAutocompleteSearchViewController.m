@@ -86,7 +86,7 @@
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                            target:self 
                                                                                            action:@selector(close)] autorelease];
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    self.searchBar = [[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)] autorelease];
     self.searchBar.delegate = self;
     self.searchBar.keyboardType = UIKeyboardTypeDefault;
     
@@ -94,7 +94,7 @@
 
     self.tableView.tableHeaderView = searchBar;
     
-    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    self.searchController = [[[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self] autorelease];
     self.searchController.delegate = self;
     self.searchController.searchResultsDelegate = self;
     self.searchController.searchResultsDataSource = self;
