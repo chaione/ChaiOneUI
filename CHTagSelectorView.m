@@ -64,7 +64,7 @@
 	
 	[self addSubview:closeButton];
 	
-	self.panelView = [[[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 320)] autorelease];
+	self.panelView = [[[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 400)] autorelease];
 	self.panelView.backgroundColor = [UIColor darkGrayColor];
 	self.panelView.layer.cornerRadius = 10;
 	self.panelView.autoresizesSubviews = YES;
