@@ -21,6 +21,9 @@ typedef enum {
 	NSMutableArray *tags;
 }
 
+@property (nonatomic, assign) CGFloat horizontalMargin;
+@property (nonatomic, assign) CGFloat tagPadding;
+@property (nonatomic, assign) CGFloat tagMargin;
 @property (nonatomic, retain) UIView *panelView;
 @property (nonatomic, retain) UIView *panelHeaderView;
 @property (nonatomic, retain) UILabel *titleLabel;

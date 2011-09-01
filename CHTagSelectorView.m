@@ -22,11 +22,14 @@
 
 @implementation CHTagSelectorView
 
-@synthesize delegate, datasource, panelView, panelHeaderView, titleLabel, transitionStyle;
+@synthesize delegate, datasource, panelView, panelHeaderView, titleLabel, transitionStyle, tagMargin, tagPadding, horizontalMargin;
 
 - (id)init {
 	self = [super init];
 	if (self) {
+        self.tagMargin = 5;
+        self.tagPadding = 15;
+        self.horizontalMargin = 10;
 		[self setupViews];
 	}
 	return self;
@@ -162,8 +165,6 @@
 		
 		tag.font = [UIFont systemFontOfSize:14];
 		tag.textColor = [UIColor whiteColor];
-		tag.shadowColor = [UIColor darkGrayColor];
-		tag.shadowOffset = CGSizeMake(0, 1);
 		tag.textAlignment = UITextAlignmentCenter;
 		tag.backgroundColor = [UIColor lightGrayColor];
 		tag.text = tagText;
@@ -189,10 +190,7 @@
 }
 
 - (void)layoutTags {
-	const int LeftRightMargin = 10;
-	const int LabelMargin = 5;
-	const int LabelPadding = 15;
-	int startX = LeftRightMargin;
+	int startX = self.horizontalMargin;
 	int startY = 70;
 		
 	for (int i=0; i < [self.tags count]; i++) {
@@ -200,11 +198,11 @@
 
 		CGSize size = [tag.text sizeWithFont:tag.font];
 		
-		tag.frame = CGRectMake(startX, startY, size.width + LabelPadding, 30);
-		startX += tag.frame.size.width + LabelMargin;
-		if (startX + tag.frame.size.width >= panelView.frame.size.width - (2 * LeftRightMargin)) {
-			startX = LeftRightMargin;
-			startY += tag.frame.size.height + LabelMargin;
+		tag.frame = CGRectMake(startX, startY, size.width + self.tagPadding, 30);
+		startX += tag.frame.size.width + self.tagMargin;
+		if (startX + tag.frame.size.width >= panelView.frame.size.width - (2 * self.horizontalMargin)) {
+			startX = self.horizontalMargin;
+			startY += tag.frame.size.height + self.tagMargin;
 		}
         
 	}
