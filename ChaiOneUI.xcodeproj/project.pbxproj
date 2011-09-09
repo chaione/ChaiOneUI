@@ -27,6 +27,8 @@
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */; };
+		B54068271419730800DFCE74 /* CHHTMLContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B54068251419730800DFCE74 /* CHHTMLContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54068261419730800DFCE74 /* CHHTMLContentViewController.m */; };
 		B5510FF313E1CFF0009628B5 /* CHUIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B5510FF113E1CF64009628B5 /* CHUIMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */; };
@@ -71,6 +73,8 @@
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStretchableImageSegmentedControl.h; sourceTree = "<group>"; };
 		B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStretchableImageSegmentedControl.m; sourceTree = "<group>"; };
+		B54068251419730800DFCE74 /* CHHTMLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHTMLContentViewController.h; sourceTree = "<group>"; };
+		B54068261419730800DFCE74 /* CHHTMLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHTMLContentViewController.m; sourceTree = "<group>"; };
 		B5510FF113E1CF64009628B5 /* CHUIMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUIMacros.h; sourceTree = "<group>"; };
 		B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControl.h; sourceTree = "<group>"; };
 		B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B5406823141972BD00DFCE74 /* CHHTMLContentViewController */,
 				299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */,
 				B559BCEC13A0223400B22A74 /* CHSegmentedControl */,
 				8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */,
@@ -222,6 +227,15 @@
 			name = UILabel;
 			sourceTree = "<group>";
 		};
+		B5406823141972BD00DFCE74 /* CHHTMLContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B54068251419730800DFCE74 /* CHHTMLContentViewController.h */,
+				B54068261419730800DFCE74 /* CHHTMLContentViewController.m */,
+			);
+			name = CHHTMLContentViewController;
+			sourceTree = "<group>";
+		};
 		B5510FEF13E1CF47009628B5 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +299,7 @@
 				8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */,
 				B5510FF313E1CFF0009628B5 /* CHUIMacros.h in Headers */,
 				8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */,
+				B54068271419730800DFCE74 /* CHHTMLContentViewController.h in Headers */,
 				8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */,
 				B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */,
 				B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */,
@@ -375,6 +390,7 @@
 				B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */,
 				B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */,
 				292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */,
+				B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
