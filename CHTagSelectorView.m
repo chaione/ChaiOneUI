@@ -146,6 +146,11 @@
 			[tag toggle];
 		}
 	}
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(allTagsSelectedForTagSelector:)]) {
+		[self.delegate allTagsSelectedForTagSelector:self];		
+	}
+
 }
 
 - (void)selectNone:(id)sender {
@@ -154,6 +159,12 @@
 			[tag toggle];
 		}
 	}	
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(allTagsDeselectedForTagSelector:)]) {
+		[self.delegate allTagsDeselectedForTagSelector:self];		
+	}
+    
+    
 }
 
 - (void)setupTags {

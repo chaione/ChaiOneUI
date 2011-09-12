@@ -60,6 +60,9 @@ typedef enum {
 //called when the panel closes.  Passes an array of CHTag instances.
 - (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)tags;
 
+- (void)allTagsSelectedForTagSelector:(CHTagSelectorView *)tagSelector;
+- (void)allTagsDeselectedForTagSelector:(CHTagSelectorView *)tagSelector;
+
 @end
 
 
