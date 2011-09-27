@@ -16,7 +16,7 @@
 
 @implementation CHButtonStrip
 
-@synthesize gapWidth, delegate, selectedIndex;
+@synthesize gapWidth, delegate, selectedIndex, justifyButtons;
 @synthesize buttons, buttonCount;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -64,16 +64,30 @@
 - (void)setupButtons {
     self.buttons = [NSMutableArray arrayWithCapacity:self.buttonCount];
     
-    CGFloat x = 0;
+    CGFloat buttonInnerPadding = 16;
+    CGFloat totalWidth = 0;
     for (int i=0; i < self.buttonCount; i++) {
         UIButton *btn = [self generateButtonForIndex:i];
-        CGFloat width = [[btn titleForState:UIControlStateNormal] sizeWithFont:btn.titleLabel.font].width + 20;
-        btn.frame = CGRectMake(x, 0, width, self.frame.size.height);
-                
+        CGFloat width = [[btn titleForState:UIControlStateNormal] sizeWithFont:btn.titleLabel.font].width + buttonInnerPadding;
+        btn.frame = CGRectMake(0, 0, width, self.frame.size.height);
+        totalWidth += width;
+                    
         [self.buttons addObject:btn];
-        [self addSubview:btn];
-        x += self.gapWidth + btn.frame.size.width;
     }
+     
+    CGFloat x = 0;
+    if (self.justifyButtons) {
+        self.gapWidth = floorf((self.frame.size.width - totalWidth) / (buttonCount - 1));
+    }
+    
+    for (int i=0; i< self.buttonCount; i++) {
+        UIButton *button = [self.buttons objectAtIndex:i];
+        [self addSubview:button];
+        CGRect frame = button.frame;
+        frame.origin.x = x;
+        button.frame = frame;
+        x += self.gapWidth + button.frame.size.width;
+    }    
 }
 
 - (void)dimAllButtonsExceptIndex:(NSInteger)newIndex {

@@ -14,6 +14,11 @@
 
 @property (nonatomic, assign) NSInteger selectedIndex; 
 @property (nonatomic, assign) CGFloat gapWidth;
+
+// if this is set to YES, the gapWidth is calculated to make
+// the buttons spread evenly across the strip's frame
+@property (nonatomic, assign) BOOL justifyButtons;
+
 @property (nonatomic, assign) IBOutlet id<CHButtonStripDelegate> delegate; 
 
 - (id)initWithButtonCount:(NSInteger)buttonCount delegate:(id<CHButtonStripDelegate>)delegate;
