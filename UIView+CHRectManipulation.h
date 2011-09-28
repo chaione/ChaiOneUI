@@ -12,6 +12,14 @@
 @interface UIView (CHRectManipulation)
 
 - (void)setOrigin:(CGPoint)origin;
+- (void)setOriginX:(CGFloat)x;
+- (void)setOriginY:(CGFloat)y;
 - (void)setSize:(CGSize)size;
+- (void)setSizeWidth:(CGFloat)w;
+- (void)setSizeHeight:(CGFloat)h;
+
+- (void)translate:(CGPoint)offset;
+- (void)translateX:(CGFloat)deltaX;
+- (void)translateY:(CGFloat)deltaY;
 
 @end
