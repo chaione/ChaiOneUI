@@ -42,6 +42,8 @@
 		B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */; };
 		B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB41386BE9100288A92 /* CHTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB51386BE9100288A92 /* CHTag.m */; };
+		D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */; };
+		D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		B5D5AFB41386BE9100288A92 /* CHTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTag.h; sourceTree = "<group>"; };
 		B5D5AFB51386BE9100288A92 /* CHTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTag.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CHRectManipulation.m"; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CHRectManipulation.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 				B58B120813D9FF94000C1663 /* UITableView */,
 				B55F8DBF13D8F5AF00A8F861 /* UIAlertView */,
 				8DB6F4CD139029AA00916F0E /* UILabel */,
+				D2AAC07E0554694100DB518E /* UIView */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -299,6 +304,15 @@
 			name = CHTagSelector;
 			sourceTree = "<group>";
 		};
+		D2AAC07E0554694100DB518E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */,
+				D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -320,6 +334,7 @@
 				B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */,
 				B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */,
 				B52F0D991430FA3F000595D4 /* CHButtonStrip.h in Headers */,
+				D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
 			);
@@ -407,6 +422,7 @@
 				292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */,
 				B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */,
 				B52F0D9A1430FA3F000595D4 /* CHButtonStrip.m in Sources */,
+				D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
