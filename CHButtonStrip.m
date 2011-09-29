@@ -103,9 +103,14 @@
     }];
 }
 
+- (void)setSelectedIndex:(NSInteger)index {
+    selectedIndex = index;
+    [self dimAllButtonsExceptIndex:index];
+}
+
 - (void)onTouchUpInside:(id)sender {
     NSInteger index = [self.buttons indexOfObject:sender];
-    [self dimAllButtonsExceptIndex:index];
+    self.selectedIndex = index;
     if ([self.delegate respondsToSelector:@selector(buttonStrip:didSelectButtonAtIndex:)]) {
         [self.delegate buttonStrip:self didSelectButtonAtIndex:index];
     }
