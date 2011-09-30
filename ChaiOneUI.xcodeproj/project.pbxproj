@@ -14,6 +14,8 @@
 		29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F0D131C625700426DCF /* libChaiOneUtils.a */; };
 		29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F17131C62BF00426DCF /* UIKit.framework */; };
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
+		2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 29181499142E488000AC8BEB /* CHBarButtonItem.h */; };
+		2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918149A142E488000AC8BEB /* CHBarButtonItem.m */; };
 		292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */; };
 		292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */; };
 		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +66,8 @@
 		29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUtils.xcodeproj; path = External/ChaiOneUtils/ChaiOneUtils.xcodeproj; sourceTree = "<group>"; };
 		29044F17131C62BF00426DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29181499142E488000AC8BEB /* CHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBarButtonItem.h; sourceTree = "<group>"; };
+		2918149A142E488000AC8BEB /* CHBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBarButtonItem.m; sourceTree = "<group>"; };
 		292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPickerViewSensitiveScrollView.h; sourceTree = "<group>"; };
 		292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPickerViewSensitiveScrollView.m; sourceTree = "<group>"; };
 		293A1A371309786200E97454 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B52F0D961430FA0E000595D4 /* CHButtonStrip */,
+				29181498142E484C00AC8BEB /* CHBarButtonItem */,
 				B5406823141972BD00DFCE74 /* CHHTMLContentViewController */,
 				299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */,
 				B559BCEC13A0223400B22A74 /* CHSegmentedControl */,
@@ -178,6 +183,15 @@
 				29044F0D131C625700426DCF /* libChaiOneUtils.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		29181498142E484C00AC8BEB /* CHBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				29181499142E488000AC8BEB /* CHBarButtonItem.h */,
+				2918149A142E488000AC8BEB /* CHBarButtonItem.m */,
+			);
+			name = CHBarButtonItem;
 			sourceTree = "<group>";
 		};
 		293A1A361309781600E97454 /* CHSplashScreenViewController */ = {
@@ -337,6 +351,7 @@
 				D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
+				2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +438,7 @@
 				B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */,
 				B52F0D9A1430FA3F000595D4 /* CHButtonStrip.m in Sources */,
 				D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */,
+				2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
