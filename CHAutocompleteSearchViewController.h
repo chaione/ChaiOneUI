@@ -23,4 +23,10 @@
 - (void)hackToAddKeyboardSearchKey;
 - (void)manageAutocompletionBehaviorForString:(NSString *)query;
 
+- (void)close;
+- (void)setupCloseButton;
+- (void)setupSearchBar;
+- (void)setupSearchController;
+
+
 @end

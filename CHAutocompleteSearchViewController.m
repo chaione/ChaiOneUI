@@ -82,23 +82,33 @@
     return YES;
 }
 
--(void)setupUI {
+- (void)setupCloseButton {
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                            target:self 
-                                                                                           action:@selector(close)] autorelease];
+                                                                                    action:@selector(close)] autorelease];
+}
+
+- (void)setupSearchBar {
     self.searchBar = [[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)] autorelease];
     self.searchBar.delegate = self;
     self.searchBar.keyboardType = UIKeyboardTypeDefault;
     
     [self hackToAddKeyboardSearchKey];
-
-    self.tableView.tableHeaderView = searchBar;
     
+    self.tableView.tableHeaderView = searchBar;    
+}
+
+- (void)setupSearchController {
     self.searchController = [[[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self] autorelease];
     self.searchController.delegate = self;
     self.searchController.searchResultsDelegate = self;
-    self.searchController.searchResultsDataSource = self;
-    
+    self.searchController.searchResultsDataSource = self; 
+}
+
+-(void)setupUI {
+    [self setupCloseButton];
+    [self setupSearchBar];
+    [self setupSearchController];
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
 }
 
