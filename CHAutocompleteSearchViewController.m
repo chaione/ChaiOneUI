@@ -52,6 +52,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.searchBar becomeFirstResponder];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
@@ -94,7 +95,7 @@
     self.searchBar.keyboardType = UIKeyboardTypeDefault;
     
     [self hackToAddKeyboardSearchKey];
-    
+    [self.searchBar becomeFirstResponder];
     self.tableView.tableHeaderView = searchBar;    
 }
 
