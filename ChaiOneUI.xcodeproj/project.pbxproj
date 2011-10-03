@@ -34,6 +34,8 @@
 		B54068271419730800DFCE74 /* CHHTMLContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B54068251419730800DFCE74 /* CHHTMLContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54068261419730800DFCE74 /* CHHTMLContentViewController.m */; };
 		B5510FF313E1CFF0009628B5 /* CHUIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B5510FF113E1CF64009628B5 /* CHUIMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B555C4EB143A2A4D0011BCD3 /* UIButton+CHFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */; };
 		B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */; };
 		B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */ = {isa = PBXBuildFile; fileRef = B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +88,8 @@
 		B54068251419730800DFCE74 /* CHHTMLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHTMLContentViewController.h; sourceTree = "<group>"; };
 		B54068261419730800DFCE74 /* CHHTMLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHTMLContentViewController.m; sourceTree = "<group>"; };
 		B5510FF113E1CF64009628B5 /* CHUIMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUIMacros.h; sourceTree = "<group>"; };
+		B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CHFlipButton.h"; sourceTree = "<group>"; };
+		B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHFlipButton.m"; sourceTree = "<group>"; };
 		B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControl.h; sourceTree = "<group>"; };
 		B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
 		B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+CHSimpleAlerts.h"; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				B55F8DBF13D8F5AF00A8F861 /* UIAlertView */,
 				8DB6F4CD139029AA00916F0E /* UILabel */,
 				D2AAC07E0554694100DB518E /* UIView */,
+				B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */,
+				B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */,
 				B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */,
 				B52F0D991430FA3F000595D4 /* CHButtonStrip.h in Headers */,
+				B555C4EB143A2A4D0011BCD3 /* UIButton+CHFlipButton.h in Headers */,
 				D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
@@ -439,6 +446,7 @@
 				B52F0D9A1430FA3F000595D4 /* CHButtonStrip.m in Sources */,
 				D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */,
 				2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */,
+				B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
