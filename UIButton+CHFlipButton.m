@@ -15,7 +15,7 @@ static char UIButtonFlipAltButtonKey;
 static char UIButtonFlipTransitionKey;
 static char UIButtonFlipContainerViewKey;
 
-
+typedef void (^UIButtonFlipActionBlock)(id sender);
 
 @implementation UIButton (CHFlipButton)
 
@@ -74,7 +74,6 @@ static char UIButtonFlipContainerViewKey;
     [button1 setBackgroundImage:firstImage forState:UIControlStateNormal];
     [button1 chFlipButton_handleControlEvent:UIControlEventTouchUpInside withBlock:flipButtonAction];
     [button1 setFrame:CGRectMake(0, 0, firstImage.size.width, firstImage.size.height)];
-
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button2 setBackgroundImage:secondImage forState:UIControlStateNormal];
@@ -89,8 +88,8 @@ static char UIButtonFlipContainerViewKey;
     objc_setAssociatedObject(button1, &UIButtonFlipTransitionKey, [NSNumber numberWithInt:firstTransition], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(button1, &UIButtonFlipContainerViewKey, container, OBJC_ASSOCIATION_ASSIGN);
     
-    objc_setAssociatedObject(button2, &UIButtonFlipAltButtonKey, button1, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    objc_setAssociatedObject(button2, &UIButtonFlipTransitionKey, [NSNumber numberWithInt:secondTransition], OBJC_ASSOCIATION_ASSIGN);  //button1 is in charge of the retains initially
+    objc_setAssociatedObject(button2, &UIButtonFlipAltButtonKey, button1, OBJC_ASSOCIATION_ASSIGN); //button1 is in charge of the retains initially
+    objc_setAssociatedObject(button2, &UIButtonFlipTransitionKey, [NSNumber numberWithInt:secondTransition], OBJC_ASSOCIATION_RETAIN_NONATOMIC);  
     objc_setAssociatedObject(button2, &UIButtonFlipContainerViewKey, container, OBJC_ASSOCIATION_ASSIGN);
     
     return container;

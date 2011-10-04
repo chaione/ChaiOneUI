@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^UIButtonFlipActionBlock)(id sender);
-
 @interface UIButton (CHFlipButton)
 
-- (void)chFlipButton_handleControlEvent:(UIControlEvents)event withBlock:(UIButtonFlipActionBlock)block;
-- (void)chFlipButton_callFlipBlock:(id)sender;
 + (UIView *)flipButtonWithFirstImage:(UIImage *)firstImage 
                          secondImage:(UIImage *)secondImage
                      firstTransition:(UIViewAnimationTransition)firstTransition
