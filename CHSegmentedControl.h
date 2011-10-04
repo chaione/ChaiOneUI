@@ -23,6 +23,7 @@ typedef enum {
 @protocol CHSegmentedControlDelegate;
 
 @interface CHSegmentedControl : UIView {
+    NSInteger _selectedSegmentIndex;
     NSMutableArray* _buttons;
     NSInteger _segmentCount;
     CGSize _segmentSize;
@@ -41,6 +42,8 @@ typedef enum {
 
 //Implement this method to customize the button in subclasses
 - (void)customizeButton:(UIButton *)button atIndex:(NSUInteger)segmentIndex;
+
+//- (void)selectIndex:(NSInteger)index;
 
 @end
 

@@ -16,7 +16,7 @@
 
 @implementation CHSegmentedControl
 
-@synthesize delegate, selectedSegmentIndex, dividerStyle;
+@synthesize delegate, dividerStyle;
 
 - (id)initWithSegmentCount:(NSInteger)count
                segmentSize:(CGSize)segmentSize 
@@ -50,8 +50,12 @@
     }
 }
 
+- (NSInteger)selectedSegmentIndex {
+    return _selectedSegmentIndex;
+}
+
 - (void)setSelectedSegmentIndex:(NSInteger)index {
-    selectedSegmentIndex = index;
+    _selectedSegmentIndex = index;
     UIButton *button = [_buttons objectAtIndex:index];
     [self dimAllButtonsExcept:button];
 }
@@ -132,9 +136,7 @@
 }
 
 - (void)touchUpInsideAction:(UIButton *)button {
-    selectedSegmentIndex = [_buttons indexOfObject:button];
-    
-    [self dimAllButtonsExcept:button];
+    [self setSelectedSegmentIndex:[_buttons indexOfObject:button]];
     
     if ([delegate respondsToSelector:@selector(touchUpInsideSegmentIndex:)])
         [delegate touchUpInsideSegmentIndex:[_buttons indexOfObject:button]];
