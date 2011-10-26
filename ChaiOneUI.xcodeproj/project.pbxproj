@@ -11,7 +11,6 @@
 		29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */; };
 		29044EF0131C612900426DCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EEF131C612900426DCF /* CFNetwork.framework */; };
 		29044EF2131C613000426DCF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EF1131C613000426DCF /* CoreFoundation.framework */; };
-		29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F0D131C625700426DCF /* libChaiOneUtils.a */; };
 		29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F17131C62BF00426DCF /* UIKit.framework */; };
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
 		2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 29181499142E488000AC8BEB /* CHBarButtonItem.h */; };
@@ -50,22 +49,11 @@
 		D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		29044F0C131C625700426DCF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = ChaiOneUtils;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLoginAlertViewController.h; sourceTree = "<group>"; };
 		29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLoginAlertViewController.m; sourceTree = "<group>"; };
 		29044EEF131C612900426DCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		29044EF1131C613000426DCF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUtils.xcodeproj; path = External/ChaiOneUtils/ChaiOneUtils.xcodeproj; sourceTree = "<group>"; };
 		29044F17131C62BF00426DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29181499142E488000AC8BEB /* CHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBarButtonItem.h; sourceTree = "<group>"; };
@@ -110,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29044F0E131C626200426DCF /* libChaiOneUtils.a in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 				29044EF0131C612900426DCF /* CFNetwork.framework in Frameworks */,
 				29044EF2131C613000426DCF /* CoreFoundation.framework in Frameworks */,
@@ -133,7 +120,6 @@
 		0867D691FE84028FC02AAC07 /* ChaiOneUI */ = {
 			isa = PBXGroup;
 			children = (
-				29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */,
 				8DB6F4CB139029A200916F0E /* Categories */,
 				B5510FEF13E1CF47009628B5 /* Macros */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -179,14 +165,6 @@
 				29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */,
 			);
 			path = CHLoginAlertViewController;
-			sourceTree = "<group>";
-		};
-		29044F06131C625700426DCF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				29044F0D131C625700426DCF /* libChaiOneUtils.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		29181498142E484C00AC8BEB /* CHBarButtonItem */ = {
@@ -403,28 +381,12 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* ChaiOneUI */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 29044F06131C625700426DCF /* Products */;
-					ProjectRef = 29044F05131C625700426DCF /* ChaiOneUtils.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* ChaiOneUI */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		29044F0D131C625700426DCF /* libChaiOneUtils.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libChaiOneUtils.a;
-			remoteRef = 29044F0C131C625700426DCF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
