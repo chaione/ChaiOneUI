@@ -45,6 +45,8 @@ typedef enum {
 
 //- (void)selectIndex:(NSInteger)index;
 
+- (UIButton *)buttonAtIndex:(NSInteger)index;
+
 @end
 
 
