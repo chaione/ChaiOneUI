@@ -76,7 +76,7 @@
 }
 
 - (UIButton *)buttonAtIndex:(NSInteger)index {
-    return [self.delegate buttonFor:self atIndex:index];
+    return [_buttons objectAtIndex:index];
 }
 
 - (void)setupButtons {
