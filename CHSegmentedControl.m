@@ -75,6 +75,10 @@
     //intended to be overridden
 }
 
+- (UIButton *)buttonAtIndex:(NSInteger)index {
+    return [_buttons objectAtIndex:index];
+}
+
 - (void)setupButtons {
     _buttons = [[NSMutableArray alloc] initWithCapacity:_segmentCount];
     CGFloat horizontalOffset = 0;

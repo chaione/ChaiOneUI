@@ -42,6 +42,7 @@ typedef enum {
 
 //Implement this method to customize the button in subclasses
 - (void)customizeButton:(UIButton *)button atIndex:(NSUInteger)segmentIndex;
+- (UIButton *)buttonAtIndex:(NSInteger)index;
 
 //- (void)selectIndex:(NSInteger)index;
 
