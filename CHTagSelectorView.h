@@ -36,6 +36,9 @@ typedef enum {
 - (BOOL)allSelected;
 - (BOOL)noneSelected;
 - (void)presentInContainerView:(UIView *)view;
+- (UIButton *)doneButton;
+- (CGRect)doneButtonFrame;
+- (UIColor *)navigationBGColor;
 
 @end
 

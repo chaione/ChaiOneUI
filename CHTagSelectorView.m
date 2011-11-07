@@ -50,6 +50,24 @@
     return self;
 }
 
+- (CGRect)doneButtonFrame {
+   return CGRectMake(205, self.panelView.frame.size.height - 15, 80, 30);
+}
+
+- (UIButton *)doneButton {
+    UIButton *b = [UIButton buttonWithType:UIButtonTypeCustom];
+	[b setTitle:@"Done" forState:UIControlStateNormal];
+	
+	b.frame = [self doneButtonFrame];
+    b.backgroundColor = [UIColor colorWithWhite:.2 alpha:1.0];
+
+    return b;
+}
+
+- (UIColor *)navigationBGColor {
+    return [UIColor clearColor];
+}
+
 - (void)setupViews {
 	if(self.panelView) {
 		return;
@@ -71,26 +89,26 @@
 	self.panelView.autoresizesSubviews = YES;
 	self.panelView.clipsToBounds = YES;
 	
-	self.panelHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 60)] autorelease];
+	self.panelHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 44)] autorelease];
 	self.panelHeaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	self.panelHeaderView.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1];
+	self.panelHeaderView.backgroundColor = [self navigationBGColor]; //[UIColor colorWithWhite:0.3 alpha:1];
 	[self.panelView addSubview:panelHeaderView];
-	
+    
 	UIButton *allButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	[allButton setTitle:@"All" forState:UIControlStateNormal];
 	[allButton addTarget:self action:@selector(selectAll:) forControlEvents:UIControlEventTouchUpInside];
 	allButton.titleLabel.font = [UIFont systemFontOfSize:14];
-	allButton.frame = CGRectMake(160, 15, 40, 30);
+	allButton.frame = CGRectMake(160, 8, 40, 30);
 	[self.panelHeaderView addSubview:allButton];
 
 	UIButton *noneButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	[noneButton setTitle:@"None" forState:UIControlStateNormal];
 	[noneButton addTarget:self action:@selector(selectNone:) forControlEvents:UIControlEventTouchUpInside];
 	noneButton.titleLabel.font = [UIFont systemFontOfSize:14];
-	noneButton.frame = CGRectMake(220, 15, 40, 30);
+	noneButton.frame = CGRectMake(220, 8, 40, 30);
 	[self.panelHeaderView addSubview:noneButton];
 	
-	self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, 160, 60)] autorelease];
+	self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, 160, 44)] autorelease];
 	self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
 	self.titleLabel.backgroundColor = self.panelHeaderView.backgroundColor;
 	self.titleLabel.textColor = [UIColor whiteColor];
@@ -98,12 +116,8 @@
 	self.titleLabel.shadowOffset = CGSizeMake(0, 1);
 	[self.panelHeaderView addSubview:self.titleLabel];
 	
-	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	[doneButton setTitle:@"Done" forState:UIControlStateNormal];
-	[doneButton addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
-	doneButton.frame = CGRectMake(205, self.panelView.frame.size.height - 15, 80, 30);
-	doneButton.backgroundColor = [UIColor colorWithWhite:.2 alpha:1.0];
-	
+	UIButton *doneButton = [self doneButton];
+    [doneButton addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];	
 	[self.panelView addSubview:doneButton];
 }
 
