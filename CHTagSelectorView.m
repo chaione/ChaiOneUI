@@ -15,8 +15,6 @@
 - (void)closeAndNotifyOfSelection:(BOOL)notify;
 - (void)setupTags;
 
-@property (nonatomic, readonly) NSMutableArray *tags;
-
 @end
 
 
@@ -28,7 +26,7 @@
 	self = [super init];
 	if (self) {
         self.tagMargin = 5;
-        self.tagPadding = 15;
+        self.tagPadding = 5;
         self.horizontalMargin = 10;
 		[self setupViews];
 	}

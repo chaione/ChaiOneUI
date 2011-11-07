@@ -30,6 +30,7 @@ typedef enum {
 @property (nonatomic, assign) CHTagSelectorTransitionStyle transitionStyle;
 @property (nonatomic, assign) id<CHTagSelectorDataSource>	datasource;
 @property (nonatomic, assign) id<CHTagSelectorDelegate>		delegate;
+@property (nonatomic, readonly) NSMutableArray *tags;
 
 - (NSArray *)selectedTags;
 - (BOOL)allSelected;
