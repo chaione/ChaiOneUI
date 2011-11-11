@@ -189,7 +189,10 @@
 		tag.font = [UIFont systemFontOfSize:14];
 		tag.textColor = [UIColor whiteColor];
 		tag.textAlignment = UITextAlignmentCenter;
-		tag.backgroundColor = [UIColor lightGrayColor];
+        tag.backgroundColor = [UIColor clearColor];
+        tag.layer.backgroundColor = [[UIColor lightGrayColor] CGColor];
+		//tag.layer.backgroundColor = [UIColor lightGrayColor];
+        
 		tag.text = tagText;
 		tag.tag = i;
 		tag.userInteractionEnabled = YES;
