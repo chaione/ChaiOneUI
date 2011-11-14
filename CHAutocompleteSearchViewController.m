@@ -47,7 +47,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];    
-    self.suggestions = [NSMutableArray array];
+    if (!self.suggestions) {
+        self.suggestions = [NSMutableArray array];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
