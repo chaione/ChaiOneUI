@@ -41,10 +41,6 @@
 		B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */; };
 		B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */; };
-		B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */; };
-		B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D5AFB41386BE9100288A92 /* CHTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D5AFB51386BE9100288A92 /* CHTag.m */; };
 		D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */; };
 		D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -84,10 +80,6 @@
 		B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+CHSimpleAlerts.m"; sourceTree = "<group>"; };
 		B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+CHAdditions.h"; path = "../../../UITableView+CHAdditions.h"; sourceTree = "<group>"; };
 		B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+CHAdditions.m"; path = "../../../UITableView+CHAdditions.m"; sourceTree = "<group>"; };
-		B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTagSelectorView.h; sourceTree = "<group>"; };
-		B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTagSelectorView.m; sourceTree = "<group>"; };
-		B5D5AFB41386BE9100288A92 /* CHTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTag.h; sourceTree = "<group>"; };
-		B5D5AFB51386BE9100288A92 /* CHTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTag.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CHRectManipulation.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CHRectManipulation.h"; sourceTree = "<group>"; };
@@ -151,7 +143,6 @@
 				299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */,
 				B559BCEC13A0223400B22A74 /* CHSegmentedControl */,
 				8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */,
-				B5D5AFAF1386BDC500288A92 /* CHTagSelector */,
 				29044ED7131C60BE00426DCF /* CHLoginAlertViewController */,
 				293A1A361309781600E97454 /* CHSplashScreenViewController */,
 			);
@@ -291,17 +282,6 @@
 			path = External/ChaiOneUtils/Categories;
 			sourceTree = "<group>";
 		};
-		B5D5AFAF1386BDC500288A92 /* CHTagSelector */ = {
-			isa = PBXGroup;
-			children = (
-				B5D5AFB01386BDD700288A92 /* CHTagSelectorView.h */,
-				B5D5AFB11386BDD700288A92 /* CHTagSelectorView.m */,
-				B5D5AFB41386BE9100288A92 /* CHTag.h */,
-				B5D5AFB51386BE9100288A92 /* CHTag.m */,
-			);
-			name = CHTagSelector;
-			sourceTree = "<group>";
-		};
 		D2AAC07E0554694100DB518E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,8 +300,6 @@
 			files = (
 				293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */,
 				29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */,
-				B5D5AFB21386BDD700288A92 /* CHTagSelectorView.h in Headers */,
-				B5D5AFB61386BE9100288A92 /* CHTag.h in Headers */,
 				8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */,
 				B5510FF313E1CFF0009628B5 /* CHUIMacros.h in Headers */,
 				8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */,
@@ -395,8 +373,6 @@
 			files = (
 				293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */,
 				29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */,
-				B5D5AFB31386BDD700288A92 /* CHTagSelectorView.m in Sources */,
-				B5D5AFB71386BE9100288A92 /* CHTag.m in Sources */,
 				8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */,
 				8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */,
 				B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */,
@@ -419,7 +395,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/ChaiOneUI.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -444,7 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				DSTROOT = /tmp/ChaiOneUI.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
