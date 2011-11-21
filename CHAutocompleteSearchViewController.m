@@ -18,6 +18,7 @@
 {
     self.searchBar = nil;
     self.searchController = nil;
+    self.suggestions = nil;    
     [super dealloc];
 }
 
@@ -50,6 +51,11 @@
     if (!self.suggestions) {
         self.suggestions = [NSMutableArray array];
     }
+}
+
+- (void)viewDidUnload {
+    self.suggestions = nil;
+    [super viewDidUnload];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
