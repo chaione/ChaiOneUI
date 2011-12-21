@@ -77,7 +77,7 @@
      
     CGFloat x = 0;
     if (self.justifyButtons) {
-        self.gapWidth = floorf((self.frame.size.width - totalWidth) / (buttonCount - 1));
+        self.gapWidth = floorf((self.frame.size.width - totalWidth) / (buttonCount));
     }
     
     for (int i=0; i< self.buttonCount; i++) {
