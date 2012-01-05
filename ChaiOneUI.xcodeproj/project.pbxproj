@@ -26,6 +26,8 @@
 		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B525B73C14B6542C0004FD6F /* CHAlertView.h */; };
+		B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B525B73D14B6542C0004FD6F /* CHAlertView.m */; };
 		B52F0D991430FA3F000595D4 /* CHButtonStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = B52F0D971430FA3F000595D4 /* CHButtonStrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B52F0D9A1430FA3F000595D4 /* CHButtonStrip.m in Sources */ = {isa = PBXBuildFile; fileRef = B52F0D981430FA3F000595D4 /* CHButtonStrip.m */; };
 		B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +67,8 @@
 		8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CHAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B525B73C14B6542C0004FD6F /* CHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAlertView.h; sourceTree = "<group>"; };
+		B525B73D14B6542C0004FD6F /* CHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAlertView.m; sourceTree = "<group>"; };
 		B52F0D971430FA3F000595D4 /* CHButtonStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHButtonStrip.h; sourceTree = "<group>"; };
 		B52F0D981430FA3F000595D4 /* CHButtonStrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHButtonStrip.m; sourceTree = "<group>"; };
 		B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStretchableImageSegmentedControl.h; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B525B73B14B6541F0004FD6F /* CHAlertView */,
 				B52F0D961430FA0E000595D4 /* CHButtonStrip */,
 				29181498142E484C00AC8BEB /* CHBarButtonItem */,
 				B5406823141972BD00DFCE74 /* CHHTMLContentViewController */,
@@ -224,6 +229,15 @@
 				8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */,
 			);
 			name = UILabel;
+			sourceTree = "<group>";
+		};
+		B525B73B14B6541F0004FD6F /* CHAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B525B73C14B6542C0004FD6F /* CHAlertView.h */,
+				B525B73D14B6542C0004FD6F /* CHAlertView.m */,
+			);
+			name = CHAlertView;
 			sourceTree = "<group>";
 		};
 		B52F0D961430FA0E000595D4 /* CHButtonStrip */ = {
@@ -315,6 +329,7 @@
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
 				2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */,
+				B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +400,7 @@
 				D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */,
 				2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */,
 				B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */,
+				B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +411,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/ChaiOneUI.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -419,6 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				DSTROOT = /tmp/ChaiOneUI.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

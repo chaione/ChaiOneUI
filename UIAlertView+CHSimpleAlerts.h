@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIAlertView (CHSimpleAlerts)
+@interface UIAlertView  (CHSimpleAlerts)
 
 + (void)simpleAlertWithTitle:(NSString *)title message:(NSString *)message;
 + (void)simpleAlertWithTitle:(NSString *)title format:(NSString *)formatString, ...;
