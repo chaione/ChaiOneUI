@@ -91,14 +91,15 @@
 }
 
 - (void)dimAllButtonsExceptIndex:(NSInteger)newIndex {
-    [self.buttons enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger index, BOOL *stop) {
+    [self.buttons enumerateObjectsUsingBlock:^(id button, NSUInteger index, BOOL *stop) {
+        UIButton *b = (UIButton *)button;
         BOOL selected = index == newIndex;
-        BOOL changed = button.selected != selected;
+        BOOL changed = b.selected != selected;
         
-        [button setSelected:selected];
+        [b setSelected:selected];
         
         if (changed && [self.delegate respondsToSelector:@selector(buttonStrip:buttonStateDidChange:)]) {
-            [self.delegate buttonStrip:self buttonStateDidChange:button];
+            [self.delegate buttonStrip:self buttonStateDidChange:b];
         }
     }];
 }
