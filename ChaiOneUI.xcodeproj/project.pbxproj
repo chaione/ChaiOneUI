@@ -43,6 +43,8 @@
 		B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */; };
 		B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */; };
+		B59A539314BC9BF600C2986C /* CHModalPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B59A539114BC9BF600C2986C /* CHModalPickerView.h */; };
+		B59A539414BC9BF600C2986C /* CHModalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A539214BC9BF600C2986C /* CHModalPickerView.m */; };
 		D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */; };
 		D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+CHSimpleAlerts.m"; sourceTree = "<group>"; };
 		B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+CHAdditions.h"; path = "../../../UITableView+CHAdditions.h"; sourceTree = "<group>"; };
 		B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+CHAdditions.m"; path = "../../../UITableView+CHAdditions.m"; sourceTree = "<group>"; };
+		B59A539114BC9BF600C2986C /* CHModalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHModalPickerView.h; sourceTree = "<group>"; };
+		B59A539214BC9BF600C2986C /* CHModalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHModalPickerView.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CHRectManipulation.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CHRectManipulation.h"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B59A539014BC9B8800C2986C /* CHModalPickerView */,
 				B525B73B14B6541F0004FD6F /* CHAlertView */,
 				B52F0D961430FA0E000595D4 /* CHButtonStrip */,
 				29181498142E484C00AC8BEB /* CHBarButtonItem */,
@@ -296,6 +301,15 @@
 			path = External/ChaiOneUtils/Categories;
 			sourceTree = "<group>";
 		};
+		B59A539014BC9B8800C2986C /* CHModalPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B59A539114BC9BF600C2986C /* CHModalPickerView.h */,
+				B59A539214BC9BF600C2986C /* CHModalPickerView.m */,
+			);
+			name = CHModalPickerView;
+			sourceTree = "<group>";
+		};
 		D2AAC07E0554694100DB518E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +344,7 @@
 				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
 				2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */,
 				B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */,
+				B59A539314BC9BF600C2986C /* CHModalPickerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +416,7 @@
 				2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */,
 				B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */,
 				B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */,
+				B59A539414BC9BF600C2986C /* CHModalPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
