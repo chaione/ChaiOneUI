@@ -20,6 +20,7 @@ typedef void (^CHModalPickerCallBack)(BOOL madeChoice);
     UIPickerView *_picker;
     UIToolbar *_toolbar;
     UIView *_panel;
+    UIView *_backdropView;
     CHModalPickerCallBack _callback;
 }
 

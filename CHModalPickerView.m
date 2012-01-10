@@ -11,7 +11,7 @@
 #define CHMODALPICKER_BACKGROUND_OPACITY 0.8
 #define CHMODALPICKER_TOOLBAR_HEIGHT 40
 #define CHMODALPICKER_PANEL_HEIGHT 200
-#define CHMODALPICKER_ANIMATION_DURATION 0.5
+#define CHMODALPICKER_ANIMATION_DURATION 0.25
 
 @implementation CHModalPickerView
 
@@ -22,11 +22,6 @@
     if (self) {
         self.values = values_;
         self.userInteractionEnabled = YES;
-        self.alpha = 0;
-        self.backgroundColor = [UIColor colorWithWhite:0 alpha:CHMODALPICKER_BACKGROUND_OPACITY];
-        
-        UIGestureRecognizer *tapRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onCancel:)] autorelease];
-        [self addGestureRecognizer:tapRecognizer];
     }
     
     return self;
@@ -36,8 +31,15 @@
     if (_callback) {
         Block_release(_callback);
     }
-    [_panel removeFromSuperview];
+    
     [super dealloc];
+}
+
+- (void)setSelectedIndex:(NSInteger)newIndex {
+    selectedIndex = newIndex;
+    if (_picker) {
+        [_picker selectRow:newIndex inComponent:0 animated:YES];
+    }
 }
 
 - (void)setSelectedValue:(NSString *)value {
@@ -66,12 +68,15 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^ {
-                         self.alpha = 0;
+                         _backdropView.alpha = 0;
                          CGRect frame = _panel.frame;
                          frame.origin.y += frame.size.height;
                          _panel.frame = frame;
                      } completion: ^(BOOL finished) {
                          [_panel removeFromSuperview]; 
+                         _panel = nil;
+                         [_backdropView removeFromSuperview];
+                         _backdropView = nil;
                          [self removeFromSuperview];
                      }];
 
@@ -86,8 +91,22 @@
 }
 
 - (void)onDone:(id)sender {
+    NSLog(@"Done!");
     _callback(YES);
     [self dismissPicker];
+}
+
+- (void)onTapRecognized:(UITapGestureRecognizer *)gesture {
+    [self onCancel:gesture];
+}
+
+- (UIView *)backdropView {
+    UIView *backdrop = [[UIView alloc] initWithFrame:self.bounds];
+    backdrop.backgroundColor = [UIColor colorWithWhite:0 alpha:CHMODALPICKER_BACKGROUND_OPACITY];
+    backdrop.alpha = 0;
+    UIGestureRecognizer *tapRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapRecognized:)] autorelease];
+    [backdrop addGestureRecognizer:tapRecognizer];
+    return backdrop;
 }
 
 - (UIPickerView *)picker {
@@ -95,6 +114,7 @@
     picker.delegate = self;
     picker.dataSource = self;
     picker.showsSelectionIndicator = YES;
+    [picker selectRow:self.selectedIndex inComponent:0 animated:NO];
     
     return [picker autorelease];
 }
@@ -104,12 +124,18 @@
     toolbar.barStyle = UIBarStyleBlackTranslucent;
     
     toolbar.items = [NSArray arrayWithObjects:
-                     [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancel:)] autorelease],
-                     [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease],
-                     [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onDone:)] autorelease],
+                     [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                                                    target:self 
+                                                                    action:@selector(onCancel:)] autorelease],
+                     [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace 
+                                                                    target:nil 
+                                                                    action:nil] autorelease],
+                     [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+                                                                    target:self 
+                                                                    action:@selector(onDone:)] autorelease],
                      nil];
     
-    return [toolbar autorelease];
+    return toolbar;
 }
 
 - (void)presentWithBlock:(CHModalPickerCallBack)callback {
@@ -126,12 +152,13 @@
     self.frame = view.bounds;
     
     if(callback) {
-        Block_release(callback);
-        callback = nil;
+        Block_release(_callback);
+        _callback = nil;
     }
-    callback = Block_copy(callback);
+    _callback = Block_copy(callback);
     
     [_panel removeFromSuperview];
+    [_backdropView removeFromSuperview];
     
     _panel      = [[[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height - CHMODALPICKER_PANEL_HEIGHT, self.bounds.size.width, CHMODALPICKER_PANEL_HEIGHT)] autorelease];
     _picker     = [self picker];
@@ -140,10 +167,11 @@
     [_panel addSubview:_toolbar];
     [_panel addSubview:_picker];
     
+    _backdropView = [self backdropView];
+    [self addSubview:_backdropView];
     [self addSubview:_panel];
     [view addSubview:self];
     
-    self.alpha = 0;
     CGRect oldFrame = _panel.frame;
     CGRect newFrame = oldFrame;
     newFrame.origin.y += newFrame.size.height;
@@ -152,7 +180,7 @@
     [UIView animateWithDuration:CHMODALPICKER_ANIMATION_DURATION delay:0 options:UIViewAnimationOptionCurveEaseOut
                      animations:^ {
                          _panel.frame = oldFrame;
-                         self.alpha = 1;
+                         _backdropView.alpha = 1;
                      } completion:^ (BOOL finished) { }];
 }
 
