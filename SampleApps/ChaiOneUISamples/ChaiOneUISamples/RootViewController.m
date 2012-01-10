@@ -9,12 +9,14 @@
 #import "RootViewController.h"
 #import "TagSelectorViewController.h"
 #import "CHSegmentedControlSampleViewController.h"
+#import "ColorPickerViewController.h"
 
 @implementation RootViewController
 
 enum TableRows {
 	TableRow_TagSelector = 0,
 	TableRow_SegmentedControl,
+    TableRow_ModalPicker,
 	TableRow_Count
 };
 
@@ -79,6 +81,11 @@ enum TableRows {
 		case TableRow_SegmentedControl:
 			cell.textLabel.text = @"Custom Segmented Control";
 			break;
+            
+        case TableRow_ModalPicker:
+            cell.textLabel.text = @"Modal Picker";
+            break;
+            
 		default:
 			break;
 	}
@@ -98,6 +105,12 @@ enum TableRows {
 				[self.navigationController pushViewController:segmentVC animated:YES];
 			}
 			break;
+            
+        case TableRow_ModalPicker: {
+                ColorPickerViewController *colorPickerController = [[[ColorPickerViewController alloc] initWithNibName:@"ColorPickerViewController" bundle:nil] autorelease];
+                [self.navigationController pushViewController:colorPickerController animated:YES];
+            }
+            break;
 			
 		default:
 			break;

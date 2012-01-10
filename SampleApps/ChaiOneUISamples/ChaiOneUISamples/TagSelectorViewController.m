@@ -7,7 +7,7 @@
 //
 
 #import "TagSelectorViewController.h"
-#import "CHTagSelectorView.h"
+//#import "CHTagSelectorView.h"
 #import "NSArray+CHFunctionalAdditions.h"
 
 @implementation TagSelectorViewController
@@ -39,28 +39,28 @@
 
 #pragma mark -
 #pragma mark CGTagSelector methods
-
-- (NSInteger)numberOfTagsInTagSelector:(CHTagSelectorView *)tagSelector {
-	return tags.count;
-}
-
-- (NSString *)tagSelector:(CHTagSelectorView *)tagSelector tagForIndex:(NSInteger)index {	
-	return [tags objectAtIndex:index];
-}
-
-- (void)tagSelectorDidCancel:(CHTagSelectorView *)tagSelector {
-}
-
-- (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)selectedTags {
-	NSArray *tagNames = [selectedTags ch_collect:^(id obj) {
-		return (id)[obj text];
-	}];
-	
-	self.tagsLabel.text = [tagNames componentsJoinedByString:@", "];
-}
-
-- (void)tagSelector:(CHTagSelectorView *)tagSelector didToggleTag:(CHTag *)tag {
-}
+//
+//- (NSInteger)numberOfTagsInTagSelector:(CHTagSelectorView *)tagSelector {
+//	return tags.count;
+//}
+//
+//- (NSString *)tagSelector:(CHTagSelectorView *)tagSelector tagForIndex:(NSInteger)index {	
+//	return [tags objectAtIndex:index];
+//}
+//
+//- (void)tagSelectorDidCancel:(CHTagSelectorView *)tagSelector {
+//}
+//
+//- (void)tagSelector:(CHTagSelectorView *)tagSelector didCloseWithTags:(NSArray *)selectedTags {
+//	NSArray *tagNames = [selectedTags ch_collect:^(id obj) {
+//		return (id)[obj text];
+//	}];
+//	
+//	self.tagsLabel.text = [tagNames componentsJoinedByString:@", "];
+//}
+//
+//- (void)tagSelector:(CHTagSelectorView *)tagSelector didToggleTag:(CHTag *)tag {
+//}
 
 
 #pragma mark -
@@ -88,11 +88,11 @@
 }
 
 - (IBAction)onSelectTags:(id)sender {
-    CHTagSelectorView *tagSelector = [[CHTagSelectorView alloc] init];
-	tagSelector.titleLabel.text = @"Select Genre";
-    tagSelector.delegate = self;
-    tagSelector.datasource = self;
-	[tagSelector presentInContainerView:self.view];
+//    CHTagSelectorView *tagSelector = [[CHTagSelectorView alloc] init];
+//	tagSelector.titleLabel.text = @"Select Genre";
+//    tagSelector.delegate = self;
+//    tagSelector.datasource = self;
+//	[tagSelector presentInContainerView:self.view];
 }
 
 @end

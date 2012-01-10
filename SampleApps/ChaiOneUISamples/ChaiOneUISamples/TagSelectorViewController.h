@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHTagSelectorView.h"
+//#import "CHTagSelectorView.h"
 
-@interface TagSelectorViewController : UIViewController <CHTagSelectorDataSource, CHTagSelectorDelegate> {
+@interface TagSelectorViewController : UIViewController //<CHTagSelectorDataSource, CHTagSelectorDelegate> 
+{
     UILabel *tagsLabel;
 	NSArray *tags;
 }

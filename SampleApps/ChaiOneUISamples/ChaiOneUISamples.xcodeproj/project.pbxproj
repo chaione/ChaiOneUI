@@ -19,6 +19,8 @@
 		B52CB2B11386BCA400581E13 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CB2AF1386BCA400581E13 /* RootViewController.xib */; };
 		B52CB2D61386BD1600581E13 /* TagSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CB2D41386BD1600581E13 /* TagSelectorViewController.m */; };
 		B52CB2D71386BD1600581E13 /* TagSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CB2D51386BD1600581E13 /* TagSelectorViewController.xib */; };
+		B59A53A214BCB0D700C2986C /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A53A014BCB0D700C2986C /* ColorPickerViewController.m */; };
+		B59A53A314BCB0D700C2986C /* ColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59A53A114BCB0D700C2986C /* ColorPickerViewController.xib */; };
 		B5D5AFFD1387051F00288A92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5AFFC1387051F00288A92 /* CFNetwork.framework */; };
 		B5D5AFFF1387051F00288A92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D5AFFE1387051F00288A92 /* QuartzCore.framework */; };
 		B5D5B0301387080F00288A92 /* libChaiOneUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CE716C1386FED600162C8A /* libChaiOneUI.a */; };
@@ -64,6 +66,9 @@
 		B52CB2D31386BD1600581E13 /* TagSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectorViewController.h; sourceTree = "<group>"; };
 		B52CB2D41386BD1600581E13 /* TagSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectorViewController.m; sourceTree = "<group>"; };
 		B52CB2D51386BD1600581E13 /* TagSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagSelectorViewController.xib; sourceTree = "<group>"; };
+		B59A539F14BCB0D700C2986C /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
+		B59A53A014BCB0D700C2986C /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
+		B59A53A114BCB0D700C2986C /* ColorPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerViewController.xib; sourceTree = "<group>"; };
 		B5CE71601386FED600162C8A /* ChaiOneUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaiOneUI.xcodeproj; path = ../../ChaiOneUI.xcodeproj; sourceTree = "<group>"; };
 		B5D5AFFC1387051F00288A92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B5D5AFFE1387051F00288A92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -126,6 +131,7 @@
 		B52CB29D1386BCA300581E13 /* ChaiOneUISamples */ = {
 			isa = PBXGroup;
 			children = (
+				B59A539E14BCB0AD00C2986C /* Modal Picker */,
 				B5FF3CEA13A03081001E3602 /* Segmented Control */,
 				B52CB2D21386BCFC00581E13 /* Tag Selector */,
 				B52CB2A61386BCA300581E13 /* ChaiOneUISamplesAppDelegate.h */,
@@ -166,6 +172,16 @@
 				B52CB2D51386BD1600581E13 /* TagSelectorViewController.xib */,
 			);
 			name = "Tag Selector";
+			sourceTree = "<group>";
+		};
+		B59A539E14BCB0AD00C2986C /* Modal Picker */ = {
+			isa = PBXGroup;
+			children = (
+				B59A539F14BCB0D700C2986C /* ColorPickerViewController.h */,
+				B59A53A014BCB0D700C2986C /* ColorPickerViewController.m */,
+				B59A53A114BCB0D700C2986C /* ColorPickerViewController.xib */,
+			);
+			name = "Modal Picker";
 			sourceTree = "<group>";
 		};
 		B5CE71611386FED600162C8A /* Products */ = {
@@ -222,6 +238,7 @@
 		B52CB28A1386BCA300581E13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = ChaiONE;
 			};
 			buildConfigurationList = B52CB28D1386BCA300581E13 /* Build configuration list for PBXProject "ChaiOneUISamples" */;
@@ -270,6 +287,7 @@
 				B5FF3D2413A03491001E3602 /* bottombarblue.png in Resources */,
 				B5FF3D2513A03491001E3602 /* bottombarblue_pressed.png in Resources */,
 				B5FF3D2613A03491001E3602 /* blue-divider.png in Resources */,
+				B59A53A314BCB0D700C2986C /* ColorPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +303,7 @@
 				B52CB2AE1386BCA300581E13 /* RootViewController.m in Sources */,
 				B52CB2D61386BD1600581E13 /* TagSelectorViewController.m in Sources */,
 				B5FF3CEE13A030A8001E3602 /* CHSegmentedControlSampleViewController.m in Sources */,
+				B59A53A214BCB0D700C2986C /* ColorPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +357,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -352,7 +371,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -366,10 +385,11 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChaiOneUISamples/ChaiOneUISamples-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../../../**";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "../../**";
 				INFOPLIST_FILE = "ChaiOneUISamples/ChaiOneUISamples-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"../../../**",
+					../..,
 					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -388,10 +408,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChaiOneUISamples/ChaiOneUISamples-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../../../**";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "../../**";
 				INFOPLIST_FILE = "ChaiOneUISamples/ChaiOneUISamples-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"../../../**",
+					../..,
 					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = (
