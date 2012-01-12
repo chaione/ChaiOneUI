@@ -75,6 +75,7 @@
                      } completion: ^(BOOL finished) {
                          [_panel removeFromSuperview]; 
                          _panel = nil;
+                         _picker = nil;
                          [_backdropView removeFromSuperview];
                          _backdropView = nil;
                          [self removeFromSuperview];
