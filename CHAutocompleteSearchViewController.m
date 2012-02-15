@@ -58,11 +58,6 @@
     [super viewDidUnload];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self.searchBar becomeFirstResponder];
-}
-
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
     return YES;
 }
