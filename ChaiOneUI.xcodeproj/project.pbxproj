@@ -26,6 +26,8 @@
 		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B502BC0C14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B502BC0A14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h */; };
+		B502BC0D14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B502BC0B14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m */; };
 		B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B525B73C14B6542C0004FD6F /* CHAlertView.h */; };
 		B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B525B73D14B6542C0004FD6F /* CHAlertView.m */; };
 		B52F0D991430FA3F000595D4 /* CHButtonStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = B52F0D971430FA3F000595D4 /* CHButtonStrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +71,8 @@
 		8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CHAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B502BC0A14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CHUniqueIdentifier.h"; sourceTree = "<group>"; };
+		B502BC0B14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CHUniqueIdentifier.m"; sourceTree = "<group>"; };
 		B525B73C14B6542C0004FD6F /* CHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAlertView.h; sourceTree = "<group>"; };
 		B525B73D14B6542C0004FD6F /* CHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAlertView.m; sourceTree = "<group>"; };
 		B52F0D971430FA3F000595D4 /* CHButtonStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHButtonStrip.h; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				D2AAC07E0554694100DB518E /* UIView */,
 				B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */,
 				B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */,
+				B502BC0A14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h */,
+				B502BC0B14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */,
 				B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */,
 				B59A539314BC9BF600C2986C /* CHModalPickerView.h in Headers */,
+				B502BC0C14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +424,7 @@
 				B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */,
 				B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */,
 				B59A539414BC9BF600C2986C /* CHModalPickerView.m in Sources */,
+				B502BC0D14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
