@@ -27,9 +27,9 @@
                                        cancelButtonTitle:cancelButtonText
                                        otherButtonTitles:actionButtonText, nil];
         _block = Block_copy(block);
+        
+        [_alertView show];
     }
-    
-    [_alertView show];
     
     return self;
 }

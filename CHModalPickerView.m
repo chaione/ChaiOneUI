@@ -107,7 +107,7 @@
     backdrop.alpha = 0;
     UIGestureRecognizer *tapRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapRecognized:)] autorelease];
     [backdrop addGestureRecognizer:tapRecognizer];
-    return backdrop;
+    return [backdrop autorelease];
 }
 
 - (UIPickerView *)picker {
@@ -136,7 +136,7 @@
                                                                     action:@selector(onDone:)] autorelease],
                      nil];
     
-    return toolbar;
+    return [toolbar autorelease];
 }
 
 - (void)presentWithBlock:(CHModalPickerCallBack)callback {
