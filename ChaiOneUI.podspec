@@ -30,7 +30,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 
-  # Finally, specify any Pods that this Pod depends on.
-  #
   # s.dependency 'JSONKit', '~> 1.4'
+  s.dependency 'ChaiOneUtils', :git => "http://github.com/chaione/ChaiOneUtils.git"
 end
