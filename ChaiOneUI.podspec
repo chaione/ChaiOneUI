@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'http://github.com/chaione/ChaiOneUI.git' }
 
   s.platform = :ios
-  s.source_files = '**/*.{h,m}'
+  s.source_files = 'Classes', 'Classes/**/*.{h,m}'
 
   # A list of paths to remove after installing the Pod without the
   # `--no-clean' option. These can be examples, docs, and any other type

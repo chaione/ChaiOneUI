@@ -7,94 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */; };
 		29044EF0131C612900426DCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EEF131C612900426DCF /* CFNetwork.framework */; };
 		29044EF2131C613000426DCF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044EF1131C613000426DCF /* CoreFoundation.framework */; };
 		29044F18131C62BF00426DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F17131C62BF00426DCF /* UIKit.framework */; };
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
-		2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 29181499142E488000AC8BEB /* CHBarButtonItem.h */; };
-		2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918149A142E488000AC8BEB /* CHBarButtonItem.m */; };
-		292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */; };
-		292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */; };
-		293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 293A1A371309786200E97454 /* CHSplashScreenViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293A1A381309786200E97454 /* CHSplashScreenViewController.m */; };
-		8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */; };
-		8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		B502BC0C14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B502BC0A14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h */; };
-		B502BC0D14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B502BC0B14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m */; };
-		B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B525B73C14B6542C0004FD6F /* CHAlertView.h */; };
-		B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B525B73D14B6542C0004FD6F /* CHAlertView.m */; };
-		B52F0D991430FA3F000595D4 /* CHButtonStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = B52F0D971430FA3F000595D4 /* CHButtonStrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B52F0D9A1430FA3F000595D4 /* CHButtonStrip.m in Sources */ = {isa = PBXBuildFile; fileRef = B52F0D981430FA3F000595D4 /* CHButtonStrip.m */; };
-		B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */; };
-		B54068271419730800DFCE74 /* CHHTMLContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B54068251419730800DFCE74 /* CHHTMLContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54068261419730800DFCE74 /* CHHTMLContentViewController.m */; };
-		B5510FF313E1CFF0009628B5 /* CHUIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B5510FF113E1CF64009628B5 /* CHUIMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B555C4EB143A2A4D0011BCD3 /* UIButton+CHFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */; };
-		B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */; };
-		B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */ = {isa = PBXBuildFile; fileRef = B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */; };
-		B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */; };
-		B59A539314BC9BF600C2986C /* CHModalPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B59A539114BC9BF600C2986C /* CHModalPickerView.h */; };
-		B59A539414BC9BF600C2986C /* CHModalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A539214BC9BF600C2986C /* CHModalPickerView.m */; };
-		D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */; };
-		D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B53B85D314F7340A000C2401 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D114F7340A000C2401 /* UITableView+CHAdditions.h */; };
+		B53B85D414F7340A000C2401 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85D214F7340A000C2401 /* UITableView+CHAdditions.m */; };
+		B53B85D814F73431000C2401 /* CHUIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D714F73431000C2401 /* CHUIMacros.h */; };
+		B53B85F014F73444000C2401 /* CHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D914F73444000C2401 /* CHAlertView.h */; };
+		B53B85F114F73444000C2401 /* CHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85DA14F73444000C2401 /* CHAlertView.m */; };
+		B53B85F214F73444000C2401 /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DB14F73444000C2401 /* CHAutocompleteDelegate.h */; };
+		B53B85F314F73444000C2401 /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DC14F73444000C2401 /* CHAutocompleteSearchViewController.h */; };
+		B53B85F414F73444000C2401 /* CHAutocompleteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85DD14F73444000C2401 /* CHAutocompleteSearchViewController.m */; };
+		B53B85F514F73444000C2401 /* CHBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DE14F73444000C2401 /* CHBarButtonItem.h */; };
+		B53B85F614F73444000C2401 /* CHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85DF14F73444000C2401 /* CHBarButtonItem.m */; };
+		B53B85F714F73444000C2401 /* CHButtonStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E014F73444000C2401 /* CHButtonStrip.h */; };
+		B53B85F814F73444000C2401 /* CHButtonStrip.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E114F73444000C2401 /* CHButtonStrip.m */; };
+		B53B85F914F73444000C2401 /* CHHTMLContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E214F73444000C2401 /* CHHTMLContentViewController.h */; };
+		B53B85FA14F73444000C2401 /* CHHTMLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E314F73444000C2401 /* CHHTMLContentViewController.m */; };
+		B53B85FB14F73444000C2401 /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E414F73444000C2401 /* CHLoginAlertViewController.h */; };
+		B53B85FC14F73444000C2401 /* CHLoginAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E514F73444000C2401 /* CHLoginAlertViewController.m */; };
+		B53B85FD14F73444000C2401 /* CHModalPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E614F73444000C2401 /* CHModalPickerView.h */; };
+		B53B85FE14F73444000C2401 /* CHModalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E714F73444000C2401 /* CHModalPickerView.m */; };
+		B53B85FF14F73444000C2401 /* CHPickerViewSensitiveScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E814F73444000C2401 /* CHPickerViewSensitiveScrollView.h */; };
+		B53B860014F73444000C2401 /* CHPickerViewSensitiveScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E914F73444000C2401 /* CHPickerViewSensitiveScrollView.m */; };
+		B53B860114F73444000C2401 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EA14F73444000C2401 /* CHSegmentedControl.h */; };
+		B53B860214F73444000C2401 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85EB14F73444000C2401 /* CHSegmentedControl.m */; };
+		B53B860314F73444000C2401 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EC14F73444000C2401 /* CHSplashScreenViewController.h */; };
+		B53B860414F73444000C2401 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85ED14F73444000C2401 /* CHSplashScreenViewController.m */; };
+		B53B860514F73444000C2401 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EE14F73444000C2401 /* CHStretchableImageSegmentedControl.h */; };
+		B53B860614F73444000C2401 /* CHStretchableImageSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85EF14F73444000C2401 /* CHStretchableImageSegmentedControl.m */; };
+		B53B860B14F734BA000C2401 /* UIButton+CHFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B860714F734BA000C2401 /* UIButton+CHFlipButton.h */; };
+		B53B860C14F734BA000C2401 /* UIButton+CHFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B860814F734BA000C2401 /* UIButton+CHFlipButton.m */; };
+		B53B860D14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B860914F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h */; };
+		B53B860E14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B860A14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLoginAlertViewController.h; sourceTree = "<group>"; };
-		29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLoginAlertViewController.m; sourceTree = "<group>"; };
 		29044EEF131C612900426DCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		29044EF1131C613000426DCF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		29044F17131C62BF00426DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29044F19131C62C700426DCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		29181499142E488000AC8BEB /* CHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBarButtonItem.h; sourceTree = "<group>"; };
-		2918149A142E488000AC8BEB /* CHBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBarButtonItem.m; sourceTree = "<group>"; };
-		292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPickerViewSensitiveScrollView.h; sourceTree = "<group>"; };
-		292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPickerViewSensitiveScrollView.m; sourceTree = "<group>"; };
-		293A1A371309786200E97454 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
-		293A1A381309786200E97454 /* CHSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashScreenViewController.m; sourceTree = "<group>"; };
-		8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteSearchViewController.h; sourceTree = "<group>"; };
-		8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAutocompleteSearchViewController.m; sourceTree = "<group>"; };
-		8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteDelegate.h; sourceTree = "<group>"; };
-		8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CHAdditions.h"; sourceTree = "<group>"; };
-		8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CHAdditions.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B502BC0A14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CHUniqueIdentifier.h"; sourceTree = "<group>"; };
-		B502BC0B14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CHUniqueIdentifier.m"; sourceTree = "<group>"; };
-		B525B73C14B6542C0004FD6F /* CHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAlertView.h; sourceTree = "<group>"; };
-		B525B73D14B6542C0004FD6F /* CHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAlertView.m; sourceTree = "<group>"; };
-		B52F0D971430FA3F000595D4 /* CHButtonStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHButtonStrip.h; sourceTree = "<group>"; };
-		B52F0D981430FA3F000595D4 /* CHButtonStrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHButtonStrip.m; sourceTree = "<group>"; };
-		B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStretchableImageSegmentedControl.h; sourceTree = "<group>"; };
-		B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStretchableImageSegmentedControl.m; sourceTree = "<group>"; };
-		B54068251419730800DFCE74 /* CHHTMLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHTMLContentViewController.h; sourceTree = "<group>"; };
-		B54068261419730800DFCE74 /* CHHTMLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHTMLContentViewController.m; sourceTree = "<group>"; };
-		B5510FF113E1CF64009628B5 /* CHUIMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUIMacros.h; sourceTree = "<group>"; };
-		B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CHFlipButton.h"; sourceTree = "<group>"; };
-		B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHFlipButton.m"; sourceTree = "<group>"; };
-		B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControl.h; sourceTree = "<group>"; };
-		B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
-		B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+CHSimpleAlerts.h"; sourceTree = "<group>"; };
-		B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+CHSimpleAlerts.m"; sourceTree = "<group>"; };
-		B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+CHAdditions.h"; path = "../../../UITableView+CHAdditions.h"; sourceTree = "<group>"; };
-		B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+CHAdditions.m"; path = "../../../UITableView+CHAdditions.m"; sourceTree = "<group>"; };
-		B59A539114BC9BF600C2986C /* CHModalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHModalPickerView.h; sourceTree = "<group>"; };
-		B59A539214BC9BF600C2986C /* CHModalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHModalPickerView.m; sourceTree = "<group>"; };
+		B53B85C514F733E5000C2401 /* UIView+CHRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CHRectManipulation.h"; path = "Classes/UIView+CHRectManipulation.h"; sourceTree = "<group>"; };
+		B53B85C614F733E5000C2401 /* UIView+CHRectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+CHRectManipulation.m"; path = "Classes/UIView+CHRectManipulation.m"; sourceTree = "<group>"; };
+		B53B85C914F733F2000C2401 /* UILabel+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+CHAdditions.h"; path = "Classes/UILabel+CHAdditions.h"; sourceTree = "<group>"; };
+		B53B85CA14F733F2000C2401 /* UILabel+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+CHAdditions.m"; path = "Classes/UILabel+CHAdditions.m"; sourceTree = "<group>"; };
+		B53B85CD14F73400000C2401 /* UIAlertView+CHSimpleAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+CHSimpleAlerts.h"; path = "Classes/UIAlertView+CHSimpleAlerts.h"; sourceTree = "<group>"; };
+		B53B85CE14F73400000C2401 /* UIAlertView+CHSimpleAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+CHSimpleAlerts.m"; path = "Classes/UIAlertView+CHSimpleAlerts.m"; sourceTree = "<group>"; };
+		B53B85D114F7340A000C2401 /* UITableView+CHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+CHAdditions.h"; path = "Classes/UITableView+CHAdditions.h"; sourceTree = SOURCE_ROOT; };
+		B53B85D214F7340A000C2401 /* UITableView+CHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+CHAdditions.m"; path = "Classes/UITableView+CHAdditions.m"; sourceTree = SOURCE_ROOT; };
+		B53B85D714F73431000C2401 /* CHUIMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUIMacros.h; sourceTree = "<group>"; };
+		B53B85D914F73444000C2401 /* CHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAlertView.h; sourceTree = "<group>"; };
+		B53B85DA14F73444000C2401 /* CHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAlertView.m; sourceTree = "<group>"; };
+		B53B85DB14F73444000C2401 /* CHAutocompleteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteDelegate.h; sourceTree = "<group>"; };
+		B53B85DC14F73444000C2401 /* CHAutocompleteSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAutocompleteSearchViewController.h; sourceTree = "<group>"; };
+		B53B85DD14F73444000C2401 /* CHAutocompleteSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAutocompleteSearchViewController.m; sourceTree = "<group>"; };
+		B53B85DE14F73444000C2401 /* CHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBarButtonItem.h; sourceTree = "<group>"; };
+		B53B85DF14F73444000C2401 /* CHBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBarButtonItem.m; sourceTree = "<group>"; };
+		B53B85E014F73444000C2401 /* CHButtonStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHButtonStrip.h; sourceTree = "<group>"; };
+		B53B85E114F73444000C2401 /* CHButtonStrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHButtonStrip.m; sourceTree = "<group>"; };
+		B53B85E214F73444000C2401 /* CHHTMLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHTMLContentViewController.h; sourceTree = "<group>"; };
+		B53B85E314F73444000C2401 /* CHHTMLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHTMLContentViewController.m; sourceTree = "<group>"; };
+		B53B85E414F73444000C2401 /* CHLoginAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLoginAlertViewController.h; sourceTree = "<group>"; };
+		B53B85E514F73444000C2401 /* CHLoginAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLoginAlertViewController.m; sourceTree = "<group>"; };
+		B53B85E614F73444000C2401 /* CHModalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHModalPickerView.h; sourceTree = "<group>"; };
+		B53B85E714F73444000C2401 /* CHModalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHModalPickerView.m; sourceTree = "<group>"; };
+		B53B85E814F73444000C2401 /* CHPickerViewSensitiveScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPickerViewSensitiveScrollView.h; sourceTree = "<group>"; };
+		B53B85E914F73444000C2401 /* CHPickerViewSensitiveScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPickerViewSensitiveScrollView.m; sourceTree = "<group>"; };
+		B53B85EA14F73444000C2401 /* CHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSegmentedControl.h; sourceTree = "<group>"; };
+		B53B85EB14F73444000C2401 /* CHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSegmentedControl.m; sourceTree = "<group>"; };
+		B53B85EC14F73444000C2401 /* CHSplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashScreenViewController.h; sourceTree = "<group>"; };
+		B53B85ED14F73444000C2401 /* CHSplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashScreenViewController.m; sourceTree = "<group>"; };
+		B53B85EE14F73444000C2401 /* CHStretchableImageSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStretchableImageSegmentedControl.h; sourceTree = "<group>"; };
+		B53B85EF14F73444000C2401 /* CHStretchableImageSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStretchableImageSegmentedControl.m; sourceTree = "<group>"; };
+		B53B860714F734BA000C2401 /* UIButton+CHFlipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CHFlipButton.h"; sourceTree = "<group>"; };
+		B53B860814F734BA000C2401 /* UIButton+CHFlipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHFlipButton.m"; sourceTree = "<group>"; };
+		B53B860914F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CHUniqueIdentifier.h"; sourceTree = "<group>"; };
+		B53B860A14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CHUniqueIdentifier.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CHRectManipulation.m"; sourceTree = "<group>"; };
-		D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CHRectManipulation.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,55 +143,31 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B59A539014BC9B8800C2986C /* CHModalPickerView */,
-				B525B73B14B6541F0004FD6F /* CHAlertView */,
-				B52F0D961430FA0E000595D4 /* CHButtonStrip */,
-				29181498142E484C00AC8BEB /* CHBarButtonItem */,
-				B5406823141972BD00DFCE74 /* CHHTMLContentViewController */,
-				299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */,
-				B559BCEC13A0223400B22A74 /* CHSegmentedControl */,
-				8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */,
-				29044ED7131C60BE00426DCF /* CHLoginAlertViewController */,
-				293A1A361309781600E97454 /* CHSplashScreenViewController */,
+				B53B85D914F73444000C2401 /* CHAlertView.h */,
+				B53B85DA14F73444000C2401 /* CHAlertView.m */,
+				B53B85DB14F73444000C2401 /* CHAutocompleteDelegate.h */,
+				B53B85DC14F73444000C2401 /* CHAutocompleteSearchViewController.h */,
+				B53B85DD14F73444000C2401 /* CHAutocompleteSearchViewController.m */,
+				B53B85DE14F73444000C2401 /* CHBarButtonItem.h */,
+				B53B85DF14F73444000C2401 /* CHBarButtonItem.m */,
+				B53B85E014F73444000C2401 /* CHButtonStrip.h */,
+				B53B85E114F73444000C2401 /* CHButtonStrip.m */,
+				B53B85E214F73444000C2401 /* CHHTMLContentViewController.h */,
+				B53B85E314F73444000C2401 /* CHHTMLContentViewController.m */,
+				B53B85E414F73444000C2401 /* CHLoginAlertViewController.h */,
+				B53B85E514F73444000C2401 /* CHLoginAlertViewController.m */,
+				B53B85E614F73444000C2401 /* CHModalPickerView.h */,
+				B53B85E714F73444000C2401 /* CHModalPickerView.m */,
+				B53B85E814F73444000C2401 /* CHPickerViewSensitiveScrollView.h */,
+				B53B85E914F73444000C2401 /* CHPickerViewSensitiveScrollView.m */,
+				B53B85EA14F73444000C2401 /* CHSegmentedControl.h */,
+				B53B85EB14F73444000C2401 /* CHSegmentedControl.m */,
+				B53B85EC14F73444000C2401 /* CHSplashScreenViewController.h */,
+				B53B85ED14F73444000C2401 /* CHSplashScreenViewController.m */,
+				B53B85EE14F73444000C2401 /* CHStretchableImageSegmentedControl.h */,
+				B53B85EF14F73444000C2401 /* CHStretchableImageSegmentedControl.m */,
 			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		29044ED7131C60BE00426DCF /* CHLoginAlertViewController */ = {
-			isa = PBXGroup;
-			children = (
-				29044ED8131C60BE00426DCF /* CHLoginAlertViewController.h */,
-				29044ED9131C60BE00426DCF /* CHLoginAlertViewController.m */,
-			);
-			path = CHLoginAlertViewController;
-			sourceTree = "<group>";
-		};
-		29181498142E484C00AC8BEB /* CHBarButtonItem */ = {
-			isa = PBXGroup;
-			children = (
-				29181499142E488000AC8BEB /* CHBarButtonItem.h */,
-				2918149A142E488000AC8BEB /* CHBarButtonItem.m */,
-			);
-			name = CHBarButtonItem;
-			sourceTree = "<group>";
-		};
-		293A1A361309781600E97454 /* CHSplashScreenViewController */ = {
-			isa = PBXGroup;
-			children = (
-				293A1A371309786200E97454 /* CHSplashScreenViewController.h */,
-				293A1A381309786200E97454 /* CHSplashScreenViewController.m */,
-			);
-			name = CHSplashScreenViewController;
-			path = SplashScreenViewController;
-			sourceTree = "<group>";
-		};
-		299E008E13DF7FF3006E7326 /* CHPickerViewSensitiveScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				292A237D13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h */,
-				292A237E13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m */,
-			);
-			name = CHPickerViewSensitiveScrollView;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -208,16 +178,6 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		8D5FE3381396F315008D5D9A /* CHAutocompleteViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8D5FE34A1396F3A2008D5D9A /* CHAutocompleteDelegate.h */,
-				8D5FE3421396F353008D5D9A /* CHAutocompleteSearchViewController.h */,
-				8D5FE3431396F353008D5D9A /* CHAutocompleteSearchViewController.m */,
-			);
-			name = CHAutocompleteViewController;
-			sourceTree = "<group>";
-		};
 		8DB6F4CB139029A200916F0E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,74 +185,38 @@
 				B55F8DBF13D8F5AF00A8F861 /* UIAlertView */,
 				8DB6F4CD139029AA00916F0E /* UILabel */,
 				D2AAC07E0554694100DB518E /* UIView */,
-				B555C4E9143A2A4D0011BCD3 /* UIButton+CHFlipButton.h */,
-				B555C4EA143A2A4D0011BCD3 /* UIButton+CHFlipButton.m */,
-				B502BC0A14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h */,
-				B502BC0B14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m */,
+				B53B860714F734BA000C2401 /* UIButton+CHFlipButton.h */,
+				B53B860814F734BA000C2401 /* UIButton+CHFlipButton.m */,
+				B53B860914F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h */,
+				B53B860A14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m */,
 			);
 			name = Categories;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		8DB6F4CD139029AA00916F0E /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
-				8DB6F4CE139029FE00916F0E /* UILabel+CHAdditions.h */,
-				8DB6F4CF139029FE00916F0E /* UILabel+CHAdditions.m */,
+				B53B85C914F733F2000C2401 /* UILabel+CHAdditions.h */,
+				B53B85CA14F733F2000C2401 /* UILabel+CHAdditions.m */,
 			);
 			name = UILabel;
-			sourceTree = "<group>";
-		};
-		B525B73B14B6541F0004FD6F /* CHAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				B525B73C14B6542C0004FD6F /* CHAlertView.h */,
-				B525B73D14B6542C0004FD6F /* CHAlertView.m */,
-			);
-			name = CHAlertView;
-			sourceTree = "<group>";
-		};
-		B52F0D961430FA0E000595D4 /* CHButtonStrip */ = {
-			isa = PBXGroup;
-			children = (
-				B52F0D971430FA3F000595D4 /* CHButtonStrip.h */,
-				B52F0D981430FA3F000595D4 /* CHButtonStrip.m */,
-			);
-			name = CHButtonStrip;
-			sourceTree = "<group>";
-		};
-		B5406823141972BD00DFCE74 /* CHHTMLContentViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B54068251419730800DFCE74 /* CHHTMLContentViewController.h */,
-				B54068261419730800DFCE74 /* CHHTMLContentViewController.m */,
-			);
-			name = CHHTMLContentViewController;
 			sourceTree = "<group>";
 		};
 		B5510FEF13E1CF47009628B5 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
-				B5510FF113E1CF64009628B5 /* CHUIMacros.h */,
+				B53B85D714F73431000C2401 /* CHUIMacros.h */,
 			);
 			name = Macros;
-			sourceTree = "<group>";
-		};
-		B559BCEC13A0223400B22A74 /* CHSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				B559BCED13A0224D00B22A74 /* CHSegmentedControl.h */,
-				B559BCEE13A0224D00B22A74 /* CHSegmentedControl.m */,
-				B53A95F213A101D1002E4D00 /* CHStretchableImageSegmentedControl.h */,
-				B53A95F313A101D1002E4D00 /* CHStretchableImageSegmentedControl.m */,
-			);
-			name = CHSegmentedControl;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B55F8DBF13D8F5AF00A8F861 /* UIAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				B55F8DC113D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h */,
-				B55F8DC213D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m */,
+				B53B85CD14F73400000C2401 /* UIAlertView+CHSimpleAlerts.h */,
+				B53B85CE14F73400000C2401 /* UIAlertView+CHSimpleAlerts.m */,
 			);
 			name = UIAlertView;
 			sourceTree = "<group>";
@@ -300,27 +224,18 @@
 		B58B120813D9FF94000C1663 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				B58B120913D9FF94000C1663 /* UITableView+CHAdditions.h */,
-				B58B120A13D9FF94000C1663 /* UITableView+CHAdditions.m */,
+				B53B85D114F7340A000C2401 /* UITableView+CHAdditions.h */,
+				B53B85D214F7340A000C2401 /* UITableView+CHAdditions.m */,
 			);
 			name = UITableView;
 			path = External/ChaiOneUtils/Categories;
 			sourceTree = "<group>";
 		};
-		B59A539014BC9B8800C2986C /* CHModalPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				B59A539114BC9BF600C2986C /* CHModalPickerView.h */,
-				B59A539214BC9BF600C2986C /* CHModalPickerView.m */,
-			);
-			name = CHModalPickerView;
-			sourceTree = "<group>";
-		};
 		D2AAC07E0554694100DB518E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB5191 /* UIView+CHRectManipulation.h */,
-				D2AAC07E0554694100DB518F /* UIView+CHRectManipulation.m */,
+				B53B85C514F733E5000C2401 /* UIView+CHRectManipulation.h */,
+				B53B85C614F733E5000C2401 /* UIView+CHRectManipulation.m */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -332,26 +247,23 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				293A1A391309786200E97454 /* CHSplashScreenViewController.h in Headers */,
-				29044EDA131C60BE00426DCF /* CHLoginAlertViewController.h in Headers */,
-				8DB6F4D0139029FE00916F0E /* UILabel+CHAdditions.h in Headers */,
-				B5510FF313E1CFF0009628B5 /* CHUIMacros.h in Headers */,
-				8D5FE3461396F353008D5D9A /* CHAutocompleteSearchViewController.h in Headers */,
-				B54068271419730800DFCE74 /* CHHTMLContentViewController.h in Headers */,
-				8D5FE34B1396F3A2008D5D9A /* CHAutocompleteDelegate.h in Headers */,
-				B559BCEF13A0224D00B22A74 /* CHSegmentedControl.h in Headers */,
-				B53A95F413A101D1002E4D00 /* CHStretchableImageSegmentedControl.h in Headers */,
-				B55F8DC313D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.h in Headers */,
-				B58B120B13D9FF94000C1663 /* UITableView+CHAdditions.h in Headers */,
-				B52F0D991430FA3F000595D4 /* CHButtonStrip.h in Headers */,
-				B555C4EB143A2A4D0011BCD3 /* UIButton+CHFlipButton.h in Headers */,
-				D2AAC07E0554694100DB5192 /* UIView+CHRectManipulation.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
-				292A237F13DF81C800D58B55 /* CHPickerViewSensitiveScrollView.h in Headers */,
-				2918149B142E488000AC8BEB /* CHBarButtonItem.h in Headers */,
-				B525B73E14B6542C0004FD6F /* CHAlertView.h in Headers */,
-				B59A539314BC9BF600C2986C /* CHModalPickerView.h in Headers */,
-				B502BC0C14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.h in Headers */,
+				B53B85D314F7340A000C2401 /* UITableView+CHAdditions.h in Headers */,
+				B53B85D814F73431000C2401 /* CHUIMacros.h in Headers */,
+				B53B85F014F73444000C2401 /* CHAlertView.h in Headers */,
+				B53B85F214F73444000C2401 /* CHAutocompleteDelegate.h in Headers */,
+				B53B85F314F73444000C2401 /* CHAutocompleteSearchViewController.h in Headers */,
+				B53B85F514F73444000C2401 /* CHBarButtonItem.h in Headers */,
+				B53B85F714F73444000C2401 /* CHButtonStrip.h in Headers */,
+				B53B85F914F73444000C2401 /* CHHTMLContentViewController.h in Headers */,
+				B53B85FB14F73444000C2401 /* CHLoginAlertViewController.h in Headers */,
+				B53B85FD14F73444000C2401 /* CHModalPickerView.h in Headers */,
+				B53B85FF14F73444000C2401 /* CHPickerViewSensitiveScrollView.h in Headers */,
+				B53B860114F73444000C2401 /* CHSegmentedControl.h in Headers */,
+				B53B860314F73444000C2401 /* CHSplashScreenViewController.h in Headers */,
+				B53B860514F73444000C2401 /* CHStretchableImageSegmentedControl.h in Headers */,
+				B53B860B14F734BA000C2401 /* UIButton+CHFlipButton.h in Headers */,
+				B53B860D14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,23 +320,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				293A1A3A1309786200E97454 /* CHSplashScreenViewController.m in Sources */,
-				29044EDB131C60BE00426DCF /* CHLoginAlertViewController.m in Sources */,
-				8DB6F4D1139029FE00916F0E /* UILabel+CHAdditions.m in Sources */,
-				8D5FE3471396F353008D5D9A /* CHAutocompleteSearchViewController.m in Sources */,
-				B559BCF013A0224D00B22A74 /* CHSegmentedControl.m in Sources */,
-				B53A95F513A101D1002E4D00 /* CHStretchableImageSegmentedControl.m in Sources */,
-				B55F8DC413D8F5C600A8F861 /* UIAlertView+CHSimpleAlerts.m in Sources */,
-				B58B120C13D9FF94000C1663 /* UITableView+CHAdditions.m in Sources */,
-				292A238013DF81C800D58B55 /* CHPickerViewSensitiveScrollView.m in Sources */,
-				B54068281419730800DFCE74 /* CHHTMLContentViewController.m in Sources */,
-				B52F0D9A1430FA3F000595D4 /* CHButtonStrip.m in Sources */,
-				D2AAC07E0554694100DB5190 /* UIView+CHRectManipulation.m in Sources */,
-				2918149C142E488000AC8BEB /* CHBarButtonItem.m in Sources */,
-				B555C4EC143A2A4D0011BCD3 /* UIButton+CHFlipButton.m in Sources */,
-				B525B73F14B6542C0004FD6F /* CHAlertView.m in Sources */,
-				B59A539414BC9BF600C2986C /* CHModalPickerView.m in Sources */,
-				B502BC0D14EEE61E0035212B /* UIDevice+CHUniqueIdentifier.m in Sources */,
+				B53B85D414F7340A000C2401 /* UITableView+CHAdditions.m in Sources */,
+				B53B85F114F73444000C2401 /* CHAlertView.m in Sources */,
+				B53B85F414F73444000C2401 /* CHAutocompleteSearchViewController.m in Sources */,
+				B53B85F614F73444000C2401 /* CHBarButtonItem.m in Sources */,
+				B53B85F814F73444000C2401 /* CHButtonStrip.m in Sources */,
+				B53B85FA14F73444000C2401 /* CHHTMLContentViewController.m in Sources */,
+				B53B85FC14F73444000C2401 /* CHLoginAlertViewController.m in Sources */,
+				B53B85FE14F73444000C2401 /* CHModalPickerView.m in Sources */,
+				B53B860014F73444000C2401 /* CHPickerViewSensitiveScrollView.m in Sources */,
+				B53B860214F73444000C2401 /* CHSegmentedControl.m in Sources */,
+				B53B860414F73444000C2401 /* CHSplashScreenViewController.m in Sources */,
+				B53B860614F73444000C2401 /* CHStretchableImageSegmentedControl.m in Sources */,
+				B53B860C14F734BA000C2401 /* UIButton+CHFlipButton.m in Sources */,
+				B53B860E14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
