@@ -13,36 +13,37 @@
 		29044F1A131C62C700426DCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29044F19131C62C700426DCF /* QuartzCore.framework */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneUI_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		B53B85D314F7340A000C2401 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D114F7340A000C2401 /* UITableView+CHAdditions.h */; };
+		B53B85D314F7340A000C2401 /* UITableView+CHAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D114F7340A000C2401 /* UITableView+CHAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85D414F7340A000C2401 /* UITableView+CHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85D214F7340A000C2401 /* UITableView+CHAdditions.m */; };
-		B53B85D814F73431000C2401 /* CHUIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D714F73431000C2401 /* CHUIMacros.h */; };
-		B53B85F014F73444000C2401 /* CHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D914F73444000C2401 /* CHAlertView.h */; };
+		B53B85D814F73431000C2401 /* CHUIMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D714F73431000C2401 /* CHUIMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B53B85F014F73444000C2401 /* CHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85D914F73444000C2401 /* CHAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85F114F73444000C2401 /* CHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85DA14F73444000C2401 /* CHAlertView.m */; };
-		B53B85F214F73444000C2401 /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DB14F73444000C2401 /* CHAutocompleteDelegate.h */; };
-		B53B85F314F73444000C2401 /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DC14F73444000C2401 /* CHAutocompleteSearchViewController.h */; };
+		B53B85F214F73444000C2401 /* CHAutocompleteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DB14F73444000C2401 /* CHAutocompleteDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B53B85F314F73444000C2401 /* CHAutocompleteSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DC14F73444000C2401 /* CHAutocompleteSearchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85F414F73444000C2401 /* CHAutocompleteSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85DD14F73444000C2401 /* CHAutocompleteSearchViewController.m */; };
-		B53B85F514F73444000C2401 /* CHBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DE14F73444000C2401 /* CHBarButtonItem.h */; };
+		B53B85F514F73444000C2401 /* CHBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85DE14F73444000C2401 /* CHBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85F614F73444000C2401 /* CHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85DF14F73444000C2401 /* CHBarButtonItem.m */; };
-		B53B85F714F73444000C2401 /* CHButtonStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E014F73444000C2401 /* CHButtonStrip.h */; };
+		B53B85F714F73444000C2401 /* CHButtonStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E014F73444000C2401 /* CHButtonStrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85F814F73444000C2401 /* CHButtonStrip.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E114F73444000C2401 /* CHButtonStrip.m */; };
-		B53B85F914F73444000C2401 /* CHHTMLContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E214F73444000C2401 /* CHHTMLContentViewController.h */; };
+		B53B85F914F73444000C2401 /* CHHTMLContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E214F73444000C2401 /* CHHTMLContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85FA14F73444000C2401 /* CHHTMLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E314F73444000C2401 /* CHHTMLContentViewController.m */; };
-		B53B85FB14F73444000C2401 /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E414F73444000C2401 /* CHLoginAlertViewController.h */; };
+		B53B85FB14F73444000C2401 /* CHLoginAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E414F73444000C2401 /* CHLoginAlertViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85FC14F73444000C2401 /* CHLoginAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E514F73444000C2401 /* CHLoginAlertViewController.m */; };
-		B53B85FD14F73444000C2401 /* CHModalPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E614F73444000C2401 /* CHModalPickerView.h */; };
+		B53B85FD14F73444000C2401 /* CHModalPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E614F73444000C2401 /* CHModalPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B85FE14F73444000C2401 /* CHModalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E714F73444000C2401 /* CHModalPickerView.m */; };
-		B53B85FF14F73444000C2401 /* CHPickerViewSensitiveScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E814F73444000C2401 /* CHPickerViewSensitiveScrollView.h */; };
+		B53B85FF14F73444000C2401 /* CHPickerViewSensitiveScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85E814F73444000C2401 /* CHPickerViewSensitiveScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B860014F73444000C2401 /* CHPickerViewSensitiveScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85E914F73444000C2401 /* CHPickerViewSensitiveScrollView.m */; };
-		B53B860114F73444000C2401 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EA14F73444000C2401 /* CHSegmentedControl.h */; };
+		B53B860114F73444000C2401 /* CHSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EA14F73444000C2401 /* CHSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B860214F73444000C2401 /* CHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85EB14F73444000C2401 /* CHSegmentedControl.m */; };
-		B53B860314F73444000C2401 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EC14F73444000C2401 /* CHSplashScreenViewController.h */; };
+		B53B860314F73444000C2401 /* CHSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EC14F73444000C2401 /* CHSplashScreenViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B860414F73444000C2401 /* CHSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85ED14F73444000C2401 /* CHSplashScreenViewController.m */; };
-		B53B860514F73444000C2401 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EE14F73444000C2401 /* CHStretchableImageSegmentedControl.h */; };
+		B53B860514F73444000C2401 /* CHStretchableImageSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B85EE14F73444000C2401 /* CHStretchableImageSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B860614F73444000C2401 /* CHStretchableImageSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B85EF14F73444000C2401 /* CHStretchableImageSegmentedControl.m */; };
-		B53B860B14F734BA000C2401 /* UIButton+CHFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B860714F734BA000C2401 /* UIButton+CHFlipButton.h */; };
+		B53B860B14F734BA000C2401 /* UIButton+CHFlipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B860714F734BA000C2401 /* UIButton+CHFlipButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B860C14F734BA000C2401 /* UIButton+CHFlipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B860814F734BA000C2401 /* UIButton+CHFlipButton.m */; };
-		B53B860D14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B860914F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h */; };
+		B53B860D14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B860914F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53B860E14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B860A14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m */; };
+		B5B36CCC14F737EC00B73438 /* ChaiOneUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B36CCB14F737EC00B73438 /* ChaiOneUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		B53B860814F734BA000C2401 /* UIButton+CHFlipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHFlipButton.m"; sourceTree = "<group>"; };
 		B53B860914F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CHUniqueIdentifier.h"; sourceTree = "<group>"; };
 		B53B860A14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CHUniqueIdentifier.m"; sourceTree = "<group>"; };
+		B5B36CCB14F737EC00B73438 /* ChaiOneUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneUI.h; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libChaiOneUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 				B53B85ED14F73444000C2401 /* CHSplashScreenViewController.m */,
 				B53B85EE14F73444000C2401 /* CHStretchableImageSegmentedControl.h */,
 				B53B85EF14F73444000C2401 /* CHStretchableImageSegmentedControl.m */,
+				B5B36CCB14F737EC00B73438 /* ChaiOneUI.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -247,7 +250,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 				B53B85D314F7340A000C2401 /* UITableView+CHAdditions.h in Headers */,
 				B53B85D814F73431000C2401 /* CHUIMacros.h in Headers */,
 				B53B85F014F73444000C2401 /* CHAlertView.h in Headers */,
@@ -264,6 +266,8 @@
 				B53B860514F73444000C2401 /* CHStretchableImageSegmentedControl.h in Headers */,
 				B53B860B14F734BA000C2401 /* UIButton+CHFlipButton.h in Headers */,
 				B53B860D14F734BA000C2401 /* UIDevice+CHUniqueIdentifier.h in Headers */,
+				B5B36CCC14F737EC00B73438 /* ChaiOneUI.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* ChaiOneUI_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
